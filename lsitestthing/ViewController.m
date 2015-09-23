@@ -30,20 +30,15 @@
 }
 
 - (IBAction)getApiData:(id)sender {
-    //reuse ident for table cell: seminarResultRow
-    
-    NSLog(@"Get API button fired");
     NSString *apiUrlBase = @"http://api.laserspineinstitute.com/seminars.json";
-
     NSURLSession *apiInteractionSession = [NSURLSession sharedSession];
+    
     [[apiInteractionSession
       dataTaskWithURL:[NSURL URLWithString:apiUrlBase]
       completionHandler:^(NSData * _Nullable data, NSURLResponse * _Nullable response, NSError * _Nullable error)
       {
-           NSError *jsonError = nil;
-           self.jsonobj = [NSJSONSerialization JSONObjectWithData:data options:0 error:&jsonError];
-
-            //NSLog(@"Got API response: %@", [self.jsonobj valueAtIndex:]);
+          NSError *jsonError = nil;
+          self.jsonobj = [NSJSONSerialization JSONObjectWithData:data options:0 error:&jsonError];
           NSLog(@"Got API response: %@", [self.jsonobj objectAtIndex:0]);
           
       }] resume];
@@ -51,7 +46,7 @@
 
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath{
     UITableViewCell *resultsRowCell = [tableView dequeueReusableCellWithIdentifier:@"seminarResultRow"];
-    
+    //reuse ident for table cell: seminarResultRow
     
     
     return resultsRowCell;
