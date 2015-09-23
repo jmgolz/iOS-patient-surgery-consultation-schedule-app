@@ -8,8 +8,14 @@
 
 #import <UIKit/UIKit.h>
 
-@interface ViewController : UIViewController
-
+@interface ViewController : UIViewController<UITableViewDataSource>
+@property (strong, nonatomic) IBOutlet UISwipeGestureRecognizer *swipeGestureRecognizer;
+@property (strong, nonatomic) IBOutlet UIView *searchResultsView;
+@property (strong, nonatomic) IBOutlet UIView *mainScreenView;
+@property (weak, nonatomic) IBOutlet UITableView *tableView;
+@property (weak, nonatomic) IBOutlet UITableViewCell *tableViewCell;
+//@property id jsonobj;
+@property (weak, nonatomic) NSMutableArray *jsonobj;
 
 @end
 
