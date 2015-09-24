@@ -7,6 +7,7 @@
 //
 
 #import "ViewController.h"
+#import "TableResultsView.h"
 
 @interface ViewController ()
 
@@ -24,12 +25,9 @@
     // Dispose of any resources that can be recreated.
 }
 
-- (IBAction)swipeLeftGestureHandler:(id)sender {
-    NSLog(@"Swiped");
-    
-}
-
 - (IBAction)getApiData:(id)sender {
+///Turns out that prepare for segue must complete
+    
     NSString *apiUrlBase = @"http://api.laserspineinstitute.com/seminars.json";
     NSURLSession *apiInteractionSession = [NSURLSession sharedSession];
     
@@ -39,21 +37,15 @@
       {
           NSError *jsonError = nil;
           self.jsonobj = [NSJSONSerialization JSONObjectWithData:data options:0 error:&jsonError];
-          NSLog(@"Got API response: %@", [self.jsonobj objectAtIndex:0]);
-          
+          NSLog(@"Got API response: %@", [[self.jsonobj objectAtIndex:0] valueForKey:@"host"]);
+          [self performSegueWithIdentifier:@"test" sender:sender];
       }] resume];
-}
-
-- (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath{
-    UITableViewCell *resultsRowCell = [tableView dequeueReusableCellWithIdentifier:@"seminarResultRow"];
-    //reuse ident for table cell: seminarResultRow
     
     
-    return resultsRowCell;
 }
 
-- (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section{
-    return [self.jsonobj count];
+-(void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender{
+    TableResultsView *instanceDestinationControllerResultsView = segue.destinationViewController;
+    instanceDestinationControllerResultsView.jsonResults = self.jsonobj;
 }
-
 @end

@@ -16,6 +16,7 @@
 		E516C44C1BB1FEB2004D700C /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = E516C44A1BB1FEB2004D700C /* LaunchScreen.storyboard */; };
 		E516C4571BB1FEB2004D700C /* lsitestthingTests.m in Sources */ = {isa = PBXBuildFile; fileRef = E516C4561BB1FEB2004D700C /* lsitestthingTests.m */; };
 		E516C4621BB1FEB2004D700C /* lsitestthingUITests.m in Sources */ = {isa = PBXBuildFile; fileRef = E516C4611BB1FEB2004D700C /* lsitestthingUITests.m */; };
+		E51D59ED1BB3509600C241BE /* TableResultsView.m in Sources */ = {isa = PBXBuildFile; fileRef = E51D59EC1BB3509600C241BE /* TableResultsView.m */; settings = {ASSET_TAGS = (); }; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -53,6 +54,8 @@
 		E516C45D1BB1FEB2004D700C /* lsitestthingUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = lsitestthingUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		E516C4611BB1FEB2004D700C /* lsitestthingUITests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = lsitestthingUITests.m; sourceTree = "<group>"; };
 		E516C4631BB1FEB2004D700C /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		E51D59EB1BB3509600C241BE /* TableResultsView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TableResultsView.h; sourceTree = "<group>"; };
+		E51D59EC1BB3509600C241BE /* TableResultsView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TableResultsView.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -113,6 +116,8 @@
 				E516C44D1BB1FEB2004D700C /* Info.plist */,
 				E516C4451BB1FEB2004D700C /* lsitestthing.xcdatamodeld */,
 				E516C4391BB1FEB2004D700C /* Supporting Files */,
+				E51D59EB1BB3509600C241BE /* TableResultsView.h */,
+				E51D59EC1BB3509600C241BE /* TableResultsView.m */,
 			);
 			path = lsitestthing;
 			sourceTree = "<group>";
@@ -280,6 +285,7 @@
 				E516C43E1BB1FEB2004D700C /* AppDelegate.m in Sources */,
 				E516C43B1BB1FEB2004D700C /* main.m in Sources */,
 				E516C4471BB1FEB2004D700C /* lsitestthing.xcdatamodeld in Sources */,
+				E51D59ED1BB3509600C241BE /* TableResultsView.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -505,6 +511,7 @@
 				E516C4681BB1FEB2004D700C /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		E516C4691BB1FEB2004D700C /* Build configuration list for PBXNativeTarget "lsitestthingTests" */ = {
 			isa = XCConfigurationList;
@@ -513,6 +520,7 @@
 				E516C46B1BB1FEB2004D700C /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		E516C46C1BB1FEB2004D700C /* Build configuration list for PBXNativeTarget "lsitestthingUITests" */ = {
 			isa = XCConfigurationList;
@@ -521,6 +529,7 @@
 				E516C46E1BB1FEB2004D700C /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 
