@@ -8,10 +8,10 @@
 
 #import <UIKit/UIKit.h>
 
-//@interface TableResultsView : UITableViewController<UITableViewDelegate, UITableViewDataSource>
-@interface TableResultsView : UITableViewController<UITableViewDelegate>
+@interface TableResultsView : UITableViewController<UITableViewDelegate, UITableViewDataSource>
+//@interface TableResultsView : UITableViewController<UITableViewDelegate>
 @property (strong, nonatomic) IBOutlet UITableView *mainTable;
 
-@property (strong, nonatomic) NSMutableArray *jsonResults;
+@property (weak, nonatomic) NSMutableArray *jsonResults;
 
 @end

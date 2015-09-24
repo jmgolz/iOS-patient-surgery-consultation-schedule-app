@@ -16,14 +16,53 @@
     NSLog(@"KEPT API response: %@", [self.jsonResults debugDescription]);
 }
 
-//- (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath{
-//    UITableViewCell *resultsRowCell;
-//    //reuse ident for table cell: seminarResultRow
-//    return resultsRowCell;
-//}
-//
-//- (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section{
-//    return 5;
-//}
+- (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath{
+    UITableViewCell *resultsRowCell = [tableView dequeueReusableCellWithIdentifier:@"seminarResultRow"];
+    
+    NSMutableString *titleText = [NSMutableString stringWithString:[[self.jsonResults objectAtIndex:indexPath.row] valueForKey:@"host"]];
+    [titleText appendString:[NSString stringWithFormat:@" - %@", [[self.jsonResults objectAtIndex:indexPath.row] valueForKey:@"city"]]];
+    [titleText appendString:[NSString stringWithFormat:@", %@", [[self.jsonResults objectAtIndex:indexPath.row] valueForKey:@"state"]]];
+    
+    NSMutableString *subtitleText = [NSMutableString stringWithString:[[self.jsonResults objectAtIndex:indexPath.row] valueForKey:@"address"]];
+    //[subtitleText appendString:[NSString stringWithFormat:@" - %@", [[self.jsonResults objectAtIndex:indexPath.row] valueForKey:@"city"]]];
+    //[subtitleText appendString:[NSString stringWithFormat:@", %@", [[self.jsonResults objectAtIndex:indexPath.row] valueForKey:@"state"]]];
+    
+    
+    //reuse ident for table cell: seminarResultRow
+    [[resultsRowCell detailTextLabel] setText:subtitleText];
+    [[resultsRowCell textLabel] setText:titleText];
+    return resultsRowCell;
+}
+
+- (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section{
+    return [self.jsonResults count];
+}
+
+- (IBAction)handleSwipe:(id)sender {
+    NSLog(@"SWIPED");
+}
+
+-(void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath{
+    NSMutableString *bodyText = [NSMutableString stringWithString:[[self.jsonResults objectAtIndex:indexPath.row] valueForKey:@"host"]];
+    
+    [bodyText appendString:[NSString stringWithFormat:@"\n\n%@\n",       [[self.jsonResults objectAtIndex:indexPath.row] valueForKey:@"seminar_date"]]];
+    [bodyText appendString:[NSString stringWithFormat:@"%@\n", [[self.jsonResults objectAtIndex:indexPath.row] valueForKey:@"building"]]];
+    [bodyText appendString:[NSString stringWithFormat:@"%@\n",           [[self.jsonResults objectAtIndex:indexPath.row] valueForKey:@"address"]]];
+    
+    if ( [[[self.jsonResults objectAtIndex:indexPath.row] valueForKey:@"address2"] isEqual:@"<null>"] == YES ) {
+       [bodyText appendString:[NSString stringWithFormat:@"%@\n", [[self.jsonResults objectAtIndex:indexPath.row] valueForKey:@"address2"]]];
+    }
+    
+    [bodyText appendString:[NSString stringWithFormat:@"%@, ", [[self.jsonResults objectAtIndex:indexPath.row] valueForKey:@"city"]]];
+    [bodyText appendString:[NSString stringWithFormat:@"%@ ",  [[self.jsonResults objectAtIndex:indexPath.row] valueForKey:@"state"]]];
+    [bodyText appendString:[NSString stringWithFormat:@"%@",   [[self.jsonResults objectAtIndex:indexPath.row] valueForKey:@"zip"]]];
+
+
+    
+    UIAlertController *seminarDescription = [UIAlertController alertControllerWithTitle:@"Seminar Details" message:bodyText preferredStyle:UIAlertControllerStyleAlert];
+    [seminarDescription addAction:[UIAlertAction actionWithTitle:@"OK" style:UIAlertActionStyleCancel handler:nil]];
+    [self presentViewController:seminarDescription animated:YES completion:nil];
+}
+
 
 @end
