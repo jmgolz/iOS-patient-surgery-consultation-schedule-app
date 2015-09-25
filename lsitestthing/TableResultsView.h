@@ -8,11 +8,15 @@
 
 #import <UIKit/UIKit.h>
 
-@interface TableResultsView : UITableViewController<UITableViewDelegate, UITableViewDataSource>
+@interface TableResultsView : UIViewController<UITableViewDelegate, UITableViewDataSource>
 //@interface TableResultsView : UITableViewController<UITableViewDelegate>
-@property (strong, nonatomic) IBOutlet UITableView *mainTable;
+//@property (strong, nonatomic) IBOutlet UITableView *mainTable;
+
+@property (weak, nonatomic) IBOutlet UITableView *mainTable;
+
 
 @property (weak, nonatomic) NSMutableArray *jsonResults;
 @property NSString *zipCode;
 @property NSMutableArray *zipCodeResults;
+
 @end

@@ -29,7 +29,8 @@
 //        self.jsonResults = nil;
 //        self.jsonResults = tempArray;
 //    }
-    
+    self.mainTable.delegate = self;
+    self.mainTable.dataSource = self;
     
 }
 
