@@ -18,6 +18,7 @@
 		E516C4621BB1FEB2004D700C /* lsitestthingUITests.m in Sources */ = {isa = PBXBuildFile; fileRef = E516C4611BB1FEB2004D700C /* lsitestthingUITests.m */; };
 		E51D59ED1BB3509600C241BE /* TableResultsView.m in Sources */ = {isa = PBXBuildFile; fileRef = E51D59EC1BB3509600C241BE /* TableResultsView.m */; settings = {ASSET_TAGS = (); }; };
 		E51D59F11BB4960700C241BE /* CoreLocation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E51D59F01BB4960700C241BE /* CoreLocation.framework */; };
+		E58545341BB5C8AA009D49C9 /* lsi-logo-2x-1.png in Resources */ = {isa = PBXBuildFile; fileRef = E58545331BB5C8AA009D49C9 /* lsi-logo-2x-1.png */; settings = {ASSET_TAGS = (); }; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -58,6 +59,7 @@
 		E51D59EB1BB3509600C241BE /* TableResultsView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TableResultsView.h; sourceTree = "<group>"; };
 		E51D59EC1BB3509600C241BE /* TableResultsView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TableResultsView.m; sourceTree = "<group>"; };
 		E51D59F01BB4960700C241BE /* CoreLocation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreLocation.framework; path = System/Library/Frameworks/CoreLocation.framework; sourceTree = SDKROOT; };
+		E58545331BB5C8AA009D49C9 /* lsi-logo-2x-1.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "lsi-logo-2x-1.png"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -110,6 +112,7 @@
 		E516C4381BB1FEB2004D700C /* lsitestthing */ = {
 			isa = PBXGroup;
 			children = (
+				E58545301BB5C828009D49C9 /* images */,
 				E516C43C1BB1FEB2004D700C /* AppDelegate.h */,
 				E516C43D1BB1FEB2004D700C /* AppDelegate.m */,
 				E516C43F1BB1FEB2004D700C /* ViewController.h */,
@@ -150,6 +153,14 @@
 				E516C4631BB1FEB2004D700C /* Info.plist */,
 			);
 			path = lsitestthingUITests;
+			sourceTree = "<group>";
+		};
+		E58545301BB5C828009D49C9 /* images */ = {
+			isa = PBXGroup;
+			children = (
+				E58545331BB5C8AA009D49C9 /* lsi-logo-2x-1.png */,
+			);
+			name = images;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -261,6 +272,7 @@
 				E516C44C1BB1FEB2004D700C /* LaunchScreen.storyboard in Resources */,
 				E516C4491BB1FEB2004D700C /* Assets.xcassets in Resources */,
 				E516C4441BB1FEB2004D700C /* Main.storyboard in Resources */,
+				E58545341BB5C8AA009D49C9 /* lsi-logo-2x-1.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
