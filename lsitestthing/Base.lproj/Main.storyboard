@@ -16,13 +16,31 @@
                         <rect key="frame" x="0.0" y="0.0" width="414" height="736"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Enter CC ID " textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="jN5-Nc-mhw">
-                                <rect key="frame" x="35" y="47" width="345" height="30"/>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Search by Zip Code" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="jN5-Nc-mhw">
+                                <rect key="frame" x="34" y="47" width="345" height="30"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits"/>
                             </textField>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Use my location to find closest seminars:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Clv-gY-7yv">
+                                <rect key="frame" x="50" y="116" width="313" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <switch opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="oNN-EL-2Vg">
+                                <rect key="frame" x="83" y="140" width="51" height="31"/>
+                                <connections>
+                                    <action selector="enableLocationServices:" destination="BYZ-38-t0r" eventType="valueChanged" id="8et-Gb-Xyc"/>
+                                </connections>
+                            </switch>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="No" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="v4X-VX-46C">
+                                <rect key="frame" x="50" y="145" width="51" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="sHC-Vv-jQU">
-                                <rect key="frame" x="35" y="475" width="345" height="30"/>
+                                <rect key="frame" x="126" y="472" width="160" height="30"/>
                                 <state key="normal" title="Search Care Center"/>
                                 <connections>
                                     <action selector="getApiData:" destination="BYZ-38-t0r" eventType="touchUpInside" id="1kf-nL-Ya9"/>
@@ -36,6 +54,7 @@
                     <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina55"/>
                     <connections>
                         <outlet property="mainScreenView" destination="8bC-Xf-vdC" id="IZi-NC-IcI"/>
+                        <outlet property="toggleUseLocation" destination="oNN-EL-2Vg" id="Tav-D2-1dT"/>
                         <segue destination="izo-zQ-GCT" kind="show" identifier="test" id="Qtp-oX-zN3"/>
                     </connections>
                 </viewController>

@@ -13,5 +13,6 @@
 @property (strong, nonatomic) IBOutlet UITableView *mainTable;
 
 @property (weak, nonatomic) NSMutableArray *jsonResults;
-
+@property NSString *zipCode;
+@property NSMutableArray *zipCodeResults;
 @end

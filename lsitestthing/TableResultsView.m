@@ -14,6 +14,23 @@
     [super viewDidLoad];
     
     NSLog(@"KEPT API response: %@", [self.jsonResults debugDescription]);
+    NSLog(@"KEPT ZIP: %@", self.zipCode);
+    NSLog(@"KEPT ZIP CODE API response: %@", [self.zipCodeResults debugDescription]);
+//    NSMutableArray *tempArray = [[NSMutableArray alloc]init];
+//    
+//    if(self.zipCodeResults != nil){
+//        for (NSDictionary *seminarItem in self.jsonResults) {
+//            if ([self.zipCodeResults containsObject:[seminarItem objectForKey:@"zip"]] == YES) {
+//                NSLog(@"seminar: %@", [seminarItem objectForKey:@"zip"]);
+//                [tempArray addObject:seminarItem];
+//            }
+//        }
+//        NSLog(@"temp seminar: %@", [tempArray debugDescription]);
+//        self.jsonResults = nil;
+//        self.jsonResults = tempArray;
+//    }
+    
+    
 }
 
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath{
@@ -24,10 +41,7 @@
     [titleText appendString:[NSString stringWithFormat:@", %@", [[self.jsonResults objectAtIndex:indexPath.row] valueForKey:@"state"]]];
     
     NSMutableString *subtitleText = [NSMutableString stringWithString:[[self.jsonResults objectAtIndex:indexPath.row] valueForKey:@"address"]];
-    //[subtitleText appendString:[NSString stringWithFormat:@" - %@", [[self.jsonResults objectAtIndex:indexPath.row] valueForKey:@"city"]]];
-    //[subtitleText appendString:[NSString stringWithFormat:@", %@", [[self.jsonResults objectAtIndex:indexPath.row] valueForKey:@"state"]]];
-    
-    
+
     //reuse ident for table cell: seminarResultRow
     [[resultsRowCell detailTextLabel] setText:subtitleText];
     [[resultsRowCell textLabel] setText:titleText];
