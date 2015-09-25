@@ -35,18 +35,36 @@
 }
 
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath{
-    UITableViewCell *resultsRowCell = [tableView dequeueReusableCellWithIdentifier:@"seminarResultRow"];
+    //UITableViewCell *resultsRowCell = [tableView dequeueReusableCellWithIdentifier:@"seminarResultRow"];
+    self.customCell = [tableView dequeueReusableCellWithIdentifier:@"seminarResultRow"];
     
     NSMutableString *titleText = [NSMutableString stringWithString:[[self.jsonResults objectAtIndex:indexPath.row] valueForKey:@"host"]];
-    [titleText appendString:[NSString stringWithFormat:@" - %@", [[self.jsonResults objectAtIndex:indexPath.row] valueForKey:@"city"]]];
-    [titleText appendString:[NSString stringWithFormat:@", %@", [[self.jsonResults objectAtIndex:indexPath.row] valueForKey:@"state"]]];
+//    [titleText appendString:[NSString stringWithFormat:@" - %@", [[self.jsonResults objectAtIndex:indexPath.row] valueForKey:@"city"]]];
+//    [titleText appendString:[NSString stringWithFormat:@", %@", [[self.jsonResults objectAtIndex:indexPath.row] valueForKey:@"state"]]];
+    
+    [titleText appendString:@" Seminar"];
     
     NSMutableString *subtitleText = [NSMutableString stringWithString:[[self.jsonResults objectAtIndex:indexPath.row] valueForKey:@"address"]];
+    [subtitleText appendString:[NSString stringWithFormat:@"\n%@", [[self.jsonResults objectAtIndex:indexPath.row] valueForKey:@"city"]]];
+    [subtitleText appendString:[NSString stringWithFormat:@", %@", [[self.jsonResults objectAtIndex:indexPath.row] valueForKey:@"state"]]];
+    [subtitleText appendString:[NSString stringWithFormat:@" %@", [[self.jsonResults objectAtIndex:indexPath.row] valueForKey:@"zip"]]];
+    
+    NSString *dateTimeString = [NSString stringWithFormat:@"%@", [[self.jsonResults objectAtIndex:indexPath.row] valueForKey:@"seminar_date"]];
+    
+    NSDateFormatter *dateFormatter = [[NSDateFormatter alloc]init];
+    
+    
 
+    
+    self.customCell.seminarTtitle.text  = titleText;
+    self.customCell.seminarBody.text    = subtitleText;
+    self.customCell.seatsRemaning.text  = [NSString stringWithFormat:@"%@ Seats Remaining", [[self.jsonResults objectAtIndex:indexPath.row]valueForKey:@"seats_avail"]];
+    
     //reuse ident for table cell: seminarResultRow
-    [[resultsRowCell detailTextLabel] setText:subtitleText];
-    [[resultsRowCell textLabel] setText:titleText];
-    return resultsRowCell;
+//    [[resultsRowCell detailTextLabel] setText:subtitleText];
+//    [[resultsRowCell textLabel] setText:titleText];
+    //return resultsRowCell;
+    return self.customCell;
 }
 
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section{
