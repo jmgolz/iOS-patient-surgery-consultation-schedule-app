@@ -1,0 +1,164 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>testSeminarsResponseJson</key>
+	<string>(
+{
+    address = &quot;1800 Newtown Pike&quot;;
+    address2 = &quot;&lt;null&gt;&quot;;
+    building = &quot;Griffin Gate Marriott Resort &amp; Spa&quot;;
+    city = Lexington;
+    country = USA;
+    custom = &quot;&lt;null&gt;&quot;;
+    directions = &quot;&lt;null&gt;&quot;;
+    hidden = 0;
+    host = &quot;Griffin Gate Marriott Resort &amp; Spa&quot;;
+    id = 1808;
+    inprod = 1;
+    language = english;
+    locationLink = &quot;http://maps.google.com/?q=1800%20Newtown%20Pike,%20KY,%20Lexington,%2040511&quot;;
+    phone = &quot;866-DOCS-LSI (866-362-7574)&quot;;
+    phone2 = &quot;&lt;null&gt;&quot;;
+    radius = 100;
+    &quot;seats_avail&quot; = 60;
+    &quot;seats_taken&quot; = 8;
+    &quot;seminar_date&quot; = &quot;2015-10-03 10:00:00&quot;;
+    &quot;seminar_type&quot; = Informational;
+    state = KY;
+    status = 1;
+    &quot;updated_at&quot; = &quot;2015-09-29 13:40:35&quot;;
+    zip = 40511;
+},
+{
+    address = &quot;1375 North Cassady Avenue&quot;;
+    address2 = &quot;&lt;null&gt;&quot;;
+    building = &quot;Columbus Airport Marriott&quot;;
+    city = Columbus;
+    country = USA;
+    custom = &quot;&lt;null&gt;&quot;;
+    directions = &quot;&lt;null&gt;&quot;;
+    hidden = 0;
+    host = &quot;Columbus Airport Marriott&quot;;
+    id = 1807;
+    inprod = 1;
+    language = english;
+    locationLink = &quot;http://maps.google.com/?q=1375%20North%20Cassady%20Avenue,%20OH,%20Columbus,%2043219&quot;;
+    phone = &quot;866-DOCS-LSI (866-362-7574)&quot;;
+    phone2 = &quot;&lt;null&gt;&quot;;
+    radius = 100;
+    &quot;seats_avail&quot; = 55;
+    &quot;seats_taken&quot; = 0;
+    &quot;seminar_date&quot; = &quot;2015-10-17 10:00:00&quot;;
+    &quot;seminar_type&quot; = &quot;&lt;null&gt;&quot;;
+    state = OH;
+    status = 1;
+    &quot;updated_at&quot; = &quot;2015-09-14 15:27:43&quot;;
+    zip = 43219;
+},
+{
+    address = &quot;8888 E. Raintree Drive&quot;;
+    address2 = &quot;&lt;null&gt;&quot;;
+    building = &quot;Laser Spine Institute of Scottsdale&quot;;
+    city = Scottsdale;
+    country = USA;
+    custom = &quot;&lt;null&gt;&quot;;
+    directions = &quot;&lt;null&gt;&quot;;
+    hidden = 0;
+    host = &quot;Laser Spine Institute of Scottsdale&quot;;
+    id = 1804;
+    inprod = 1;
+    language = english;
+    locationLink = &quot;http://maps.google.com/?q=8888%20E.%20Raintree%20Drive,%20AZ,%20Scottsdale,%2085260&quot;;
+    phone = &quot;866-DOCS-LSI (866-362-7574)&quot;;
+    phone2 = &quot;&lt;null&gt;&quot;;
+    radius = 100;
+    &quot;seats_avail&quot; = 38;
+    &quot;seats_taken&quot; = 2;
+    &quot;seminar_date&quot; = &quot;2015-10-17 11:00:00&quot;;
+    &quot;seminar_type&quot; = Consult;
+    state = AZ;
+    status = 1;
+    &quot;updated_at&quot; = &quot;2015-09-24 12:10:04&quot;;
+    zip = 85260;
+},
+{
+    address = &quot;656 E. Swedesford Rd.&quot;;
+    address2 = &quot;&lt;null&gt;&quot;;
+    building = &quot;Laser Spine Institute of Wayne&quot;;
+    city = Wayne;
+    country = USA;
+    custom = &quot;&lt;null&gt;&quot;;
+    directions = &quot;&lt;null&gt;&quot;;
+    hidden = 0;
+    host = &quot;Laser Spine Institute of Wayne&quot;;
+    id = 1809;
+    inprod = 1;
+    language = english;
+    locationLink = &quot;http://maps.google.com/?q=656%20E.%20Swedesford%20Rd.,%20PA,%20Wayne,%2019087&quot;;
+    phone = &quot;866-DOCS-LSI (866-362-7574)&quot;;
+    phone2 = &quot;&lt;null&gt;&quot;;
+    radius = 100;
+    &quot;seats_avail&quot; = 45;
+    &quot;seats_taken&quot; = 0;
+    &quot;seminar_date&quot; = &quot;2015-10-17 11:00:00&quot;;
+    &quot;seminar_type&quot; = Consult;
+    state = PA;
+    status = 1;
+    &quot;updated_at&quot; = &quot;2015-09-23 14:38:28&quot;;
+    zip = 19087;
+},
+{
+    address = &quot;3001 N. Rocky Point Drive E.&quot;;
+    address2 = &quot;&lt;null&gt;&quot;;
+    building = &quot;Laser Spine Institute of Tampa&quot;;
+    city = Tampa;
+    country = USA;
+    custom = &quot;&lt;null&gt;&quot;;
+    directions = &quot;&lt;null&gt;&quot;;
+    hidden = 0;
+    host = &quot;Laser Spine Institute of Tampa&quot;;
+    id = 1810;
+    inprod = 1;
+    language = english;
+    locationLink = &quot;http://maps.google.com/?q=3001%20N.%20Rocky%20Point%20Drive%20E.,%20FL,%20Tampa,%2033607&quot;;
+    phone = &quot;866-DOCS-LSI (866-362-7574)&quot;;
+    phone2 = &quot;&lt;null&gt;&quot;;
+    radius = 100;
+    &quot;seats_avail&quot; = 45;
+    &quot;seats_taken&quot; = 0;
+    &quot;seminar_date&quot; = &quot;2015-10-17 11:00:00&quot;;
+    &quot;seminar_type&quot; = Consult;
+    state = FL;
+    status = 1;
+    &quot;updated_at&quot; = &quot;2015-09-23 14:38:57&quot;;
+    zip = 33607;
+},
+{
+    address = &quot;300 Allen Bradley Drive&quot;;
+    address2 = &quot;&lt;null&gt;&quot;;
+    building = &quot;Laser Spine Institute of Cleveland&quot;;
+    city = &quot;Mayfield Heights&quot;;
+    country = USA;
+    custom = &quot;&lt;null&gt;&quot;;
+    directions = &quot;&lt;null&gt;&quot;;
+    hidden = 0;
+    host = &quot;Laser Spine Institute of Cleveland&quot;;
+    id = 1811;
+    inprod = 1;
+    language = english;
+    locationLink = &quot;http://maps.google.com/?q=300%20Allen%20Bradley%20Drive,%20OH,%20Mayfield%20Heights,%2044124&quot;;
+    phone = &quot;866-DOCS-LSI (866-362-7574)&quot;;
+    phone2 = &quot;&lt;null&gt;&quot;;
+    radius = 100;
+    &quot;seats_avail&quot; = 45;
+    &quot;seats_taken&quot; = 4;
+    &quot;seminar_date&quot; = &quot;2015-10-17 11:00:00&quot;;
+    &quot;seminar_type&quot; = Consult;
+    state = OH;
+    status = 1;
+    &quot;updated_at&quot; = &quot;2015-09-26 07:07:11&quot;;
+    zip = 44124;
+}</string>
+</dict>
+</plist>
