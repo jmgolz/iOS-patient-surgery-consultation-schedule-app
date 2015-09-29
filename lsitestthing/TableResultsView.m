@@ -49,6 +49,7 @@
     NSString *dateTimeString = [NSString stringWithFormat:@"%@", [[self.jsonResults objectAtIndex:indexPath.row] valueForKey:@"seminar_date"]];
     
     NSDateFormatter *dateFormatter = [[NSDateFormatter alloc]init];
+    [dateFormatter setDateFormat:@"yyyy-MM-dd HH:mm:ss"];
     NSDate *date = [dateFormatter dateFromString:dateTimeString];
     
     NSDateFormatter *outputDateFormatter = [[NSDateFormatter alloc] init];
