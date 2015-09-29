@@ -53,6 +53,13 @@
     
     NSDateFormatter *dateFormatter = [[NSDateFormatter alloc]init];
     
+    //Get Month
+    [dateFormatter setDateFormat:@"MMM dd, YYY"];
+    NSDate *month = [NSDate date];
+    month = [dateFormatter dateFromString:dateTimeString];
+    NSLog(@"Original date time string: %@", dateTimeString);
+    NSLog(@"DATE: %@", [dateFormatter stringFromDate:month]);
+    
     
 
     

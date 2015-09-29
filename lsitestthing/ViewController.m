@@ -23,6 +23,18 @@
     self.locationManager = [[CLLocationManager alloc] init];
     self.zipCodeResults = [[NSMutableArray alloc] init];
     
+    NSString *dateTimeString = @"2015-10-17 11:00:00";
+    NSDateFormatter *dateFormatter = [[NSDateFormatter alloc]init];
+    
+    //Get Month
+    //[dateFormatter setDateFormat:@"MMM dd, YYY"];
+    [dateFormatter setDateFormat:@"MMM"];
+    //NSDate *month = [NSDate date];
+    NSDate *month = [[NSDate alloc]init];
+    month = [dateFormatter dateFromString:dateTimeString];
+    NSLog(@"Original date time string: %@", dateTimeString);
+    NSLog(@"DATE: %@", [dateFormatter stringFromDate:month]);
+    
     self.locationManager.delegate = self;
 }
 - (IBAction)enableLocationServices:(id)sender {
