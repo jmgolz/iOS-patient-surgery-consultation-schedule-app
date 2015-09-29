@@ -35,12 +35,9 @@
 }
 
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath{
-    //UITableViewCell *resultsRowCell = [tableView dequeueReusableCellWithIdentifier:@"seminarResultRow"];
     self.customCell = [tableView dequeueReusableCellWithIdentifier:@"seminarResultRow"];
     
     NSMutableString *titleText = [NSMutableString stringWithString:[[self.jsonResults objectAtIndex:indexPath.row] valueForKey:@"host"]];
-//    [titleText appendString:[NSString stringWithFormat:@" - %@", [[self.jsonResults objectAtIndex:indexPath.row] valueForKey:@"city"]]];
-//    [titleText appendString:[NSString stringWithFormat:@", %@", [[self.jsonResults objectAtIndex:indexPath.row] valueForKey:@"state"]]];
     
     [titleText appendString:@" Seminar"];
     
@@ -52,25 +49,34 @@
     NSString *dateTimeString = [NSString stringWithFormat:@"%@", [[self.jsonResults objectAtIndex:indexPath.row] valueForKey:@"seminar_date"]];
     
     NSDateFormatter *dateFormatter = [[NSDateFormatter alloc]init];
+    NSDate *date = [dateFormatter dateFromString:dateTimeString];
     
-    //Get Month
-    [dateFormatter setDateFormat:@"MMM dd, YYY"];
-    NSDate *month = [NSDate date];
-    month = [dateFormatter dateFromString:dateTimeString];
-    NSLog(@"Original date time string: %@", dateTimeString);
-    NSLog(@"DATE: %@", [dateFormatter stringFromDate:month]);
+    NSDateFormatter *outputDateFormatter = [[NSDateFormatter alloc] init];
+    [outputDateFormatter setDateStyle:NSDateFormatterMediumStyle];
+    [outputDateFormatter setTimeStyle:NSDateFormatterShortStyle];
     
+    //Make date segments
+    NSCalendar *calendar = [NSCalendar currentCalendar];
+    NSInteger units = NSCalendarUnitDay | NSCalendarUnitHour | NSCalendarUnitMinute;
+    NSDateComponents *components = [calendar components:units fromDate:date];
+    NSInteger day = [components day];
     
+    NSDateFormatter *formattedMonth = [[NSDateFormatter alloc] init];
+    [formattedMonth setDateFormat:@"MMM"];
+    
+    NSDateFormatter *formattedTime = [[NSDateFormatter alloc] init];
+    [formattedTime setLocale:[[NSLocale alloc] initWithLocaleIdentifier:@"en_US_POSIX"]];
+    [formattedTime setTimeStyle:NSDateFormatterShortStyle];
 
+    self.customCell.month.text = [formattedMonth stringFromDate:date];
+    self.customCell.day.text = [NSString stringWithFormat:@"%li", (long)day];
+    self.customCell.time.text = [formattedTime stringFromDate:date];
+    
     
     self.customCell.seminarTtitle.text  = titleText;
     self.customCell.seminarBody.text    = subtitleText;
     self.customCell.seatsRemaning.text  = [NSString stringWithFormat:@"%@ Seats Remaining", [[self.jsonResults objectAtIndex:indexPath.row]valueForKey:@"seats_avail"]];
     
-    //reuse ident for table cell: seminarResultRow
-//    [[resultsRowCell detailTextLabel] setText:subtitleText];
-//    [[resultsRowCell textLabel] setText:titleText];
-    //return resultsRowCell;
     return self.customCell;
 }
 
