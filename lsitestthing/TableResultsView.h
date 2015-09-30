@@ -20,5 +20,6 @@
 @property (weak, nonatomic) NSMutableArray *jsonResults;
 @property NSString *zipCode;
 @property NSMutableArray *zipCodeResults;
+@property NSDictionary *selectedSeminar;
 
 @end

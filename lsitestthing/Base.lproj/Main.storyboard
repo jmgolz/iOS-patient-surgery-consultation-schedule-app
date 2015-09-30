@@ -84,7 +84,7 @@
                         <viewControllerLayoutGuide type="bottom" id="rC5-0M-9bm"/>
                     </layoutGuides>
                     <view key="view" contentMode="scaleToFill" id="BTd-61-6Wb">
-                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="736"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <tableView clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="99" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="F7f-iQ-uD0">
@@ -100,31 +100,29 @@
                                             <subviews>
                                                 <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="Qa4-44-Nrv">
                                                     <rect key="frame" x="7" y="8" width="100" height="77"/>
-                                                    <subviews>
-                                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Month" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="URy-GL-Vmd">
-                                                            <rect key="frame" x="0.0" y="0.0" width="100" height="18"/>
-                                                            <color key="backgroundColor" red="0.78375552398989901" green="0.055048094937873326" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
-                                                            <fontDescription key="fontDescription" name="HelveticaNeue-Medium" family="Helvetica Neue" pointSize="14"/>
-                                                            <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                                                            <nil key="highlightedColor"/>
-                                                        </label>
-                                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Time" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="xZA-Sh-zVg">
-                                                            <rect key="frame" x="0.0" y="59" width="100" height="18"/>
-                                                            <color key="backgroundColor" red="0.78375552400000004" green="0.05504809494" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
-                                                            <fontDescription key="fontDescription" name="HelveticaNeue-Medium" family="Helvetica Neue" pointSize="14"/>
-                                                            <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                                                            <nil key="highlightedColor"/>
-                                                        </label>
-                                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Day" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Eco-jI-1ed">
-                                                            <rect key="frame" x="0.0" y="18" width="100" height="42"/>
-                                                            <color key="backgroundColor" red="0.91656802398989889" green="0.91656802398989889" blue="0.91656802398989889" alpha="1" colorSpace="calibratedRGB"/>
-                                                            <fontDescription key="fontDescription" name="HelveticaNeue-Medium" family="Helvetica Neue" pointSize="19"/>
-                                                            <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
-                                                            <nil key="highlightedColor"/>
-                                                        </label>
-                                                    </subviews>
                                                     <color key="backgroundColor" red="0.12232886580000001" green="0.85582386359999996" blue="0.1146089943" alpha="1" colorSpace="calibratedRGB"/>
                                                 </view>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Month" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="LHw-0x-d6R">
+                                                    <rect key="frame" x="7" y="8" width="100" height="18"/>
+                                                    <color key="backgroundColor" red="0.78375552400000004" green="0.05504809494" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                                    <fontDescription key="fontDescription" name="HelveticaNeue-Medium" family="Helvetica Neue" pointSize="14"/>
+                                                    <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Time" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="5mt-nX-ape">
+                                                    <rect key="frame" x="7" y="67" width="100" height="18"/>
+                                                    <color key="backgroundColor" red="0.78375552400000004" green="0.05504809494" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                                    <fontDescription key="fontDescription" name="HelveticaNeue-Medium" family="Helvetica Neue" pointSize="14"/>
+                                                    <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Day" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="5ZB-cJ-nQX">
+                                                    <rect key="frame" x="7" y="26" width="100" height="42"/>
+                                                    <color key="backgroundColor" red="0.91656802400000004" green="0.91656802400000004" blue="0.91656802400000004" alpha="1" colorSpace="calibratedRGB"/>
+                                                    <fontDescription key="fontDescription" name="HelveticaNeue-Medium" family="Helvetica Neue" pointSize="19"/>
+                                                    <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="TITLE HERE" lineBreakMode="wordWrap" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="H5F-7i-56Z">
                                                     <rect key="frame" x="118" y="5" width="435" height="21"/>
                                                     <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="13"/>
@@ -146,13 +144,13 @@
                                             </subviews>
                                         </tableViewCellContentView>
                                         <connections>
-                                            <outlet property="day" destination="Eco-jI-1ed" id="H6d-up-7xe"/>
+                                            <outlet property="day" destination="5ZB-cJ-nQX" id="Koz-cR-n2E"/>
                                             <outlet property="mainDateRect" destination="Qa4-44-Nrv" id="NBZ-hJ-UMb"/>
-                                            <outlet property="month" destination="URy-GL-Vmd" id="kyf-Nw-mRY"/>
+                                            <outlet property="month" destination="LHw-0x-d6R" id="zkP-Zb-Ylb"/>
                                             <outlet property="seatsRemaning" destination="82Z-Mi-CdB" id="1bA-cT-7n8"/>
                                             <outlet property="seminarBody" destination="cKp-cb-ZsX" id="78x-aQ-mEy"/>
                                             <outlet property="seminarTtitle" destination="H5F-7i-56Z" id="uw7-vi-kmR"/>
-                                            <outlet property="time" destination="xZA-Sh-zVg" id="3CM-GS-4Lg"/>
+                                            <outlet property="time" destination="5mt-nX-ape" id="kcZ-Em-GMM"/>
                                         </connections>
                                     </tableViewCell>
                                 </prototypes>
@@ -163,11 +161,142 @@
                     <connections>
                         <outlet property="customCell" destination="F7f-iQ-uD0" id="eWc-Rq-Egu"/>
                         <outlet property="mainTable" destination="F7f-iQ-uD0" id="wIo-gZ-IbD"/>
+                        <segue destination="XWD-mR-dos" kind="show" identifier="moveToSeminarDetailView" id="RZm-zK-qqH"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="vAu-Lg-dOO" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="515" y="295"/>
+            <point key="canvasLocation" x="501" y="294"/>
+        </scene>
+        <!--Seminar Detail-->
+        <scene sceneID="ytz-Ab-1YY">
+            <objects>
+                <viewController title="Seminar Detail" id="XWD-mR-dos" customClass="SeminarDetailView" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="ioR-v9-hSp"/>
+                        <viewControllerLayoutGuide type="bottom" id="TRd-Sk-Oto"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="1HS-o9-LeT">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="736"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <mapView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" ambiguous="YES" misplaced="YES" mapType="standard" translatesAutoresizingMaskIntoConstraints="NO" id="Lwg-ew-vBR" customClass="SeminarLocationMap">
+                                <rect key="frame" x="0.0" y="28" width="414" height="289"/>
+                            </mapView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" misplaced="YES" text="TITLE HERE" lineBreakMode="wordWrap" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="IWx-ro-WpJ">
+                                <rect key="frame" x="139" y="332" width="435" height="21"/>
+                                <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="13"/>
+                                <color key="textColor" red="0.12232886580000001" green="0.85582386359999996" blue="0.1146089943" alpha="1" colorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" tag="1" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" misplaced="YES" text="Body Text Here" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="DMX-el-YPv">
+                                <rect key="frame" x="139" y="357" width="239" height="31"/>
+                                <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="13"/>
+                                <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" tag="2" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" misplaced="YES" text="Seats" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="7Ng-NB-0Mb">
+                                <rect key="frame" x="139" y="393" width="132" height="21"/>
+                                <fontDescription key="fontDescription" name="HelveticaNeue-Medium" family="Helvetica Neue" pointSize="13"/>
+                                <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" misplaced="YES" text="Month" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="URy-GL-Vmd">
+                                <rect key="frame" x="7" y="334" width="100" height="18"/>
+                                <color key="backgroundColor" red="0.78375552398989901" green="0.055048094937873326" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                <fontDescription key="fontDescription" name="HelveticaNeue-Medium" family="Helvetica Neue" pointSize="14"/>
+                                <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" misplaced="YES" text="Time" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="xZA-Sh-zVg">
+                                <rect key="frame" x="7" y="393" width="100" height="18"/>
+                                <color key="backgroundColor" red="0.78375552400000004" green="0.05504809494" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                <fontDescription key="fontDescription" name="HelveticaNeue-Medium" family="Helvetica Neue" pointSize="14"/>
+                                <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" misplaced="YES" text="Day" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Eco-jI-1ed">
+                                <rect key="frame" x="7" y="352" width="100" height="42"/>
+                                <color key="backgroundColor" red="0.91656802398989889" green="0.91656802398989889" blue="0.91656802398989889" alpha="1" colorSpace="calibratedRGB"/>
+                                <fontDescription key="fontDescription" name="HelveticaNeue-Medium" family="Helvetica Neue" pointSize="19"/>
+                                <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" misplaced="YES" lineBreakMode="tailTruncation" numberOfLines="10" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Vpb-yl-vHZ">
+                                <rect key="frame" x="7" y="425" width="396" height="51"/>
+                                <string key="text">To register for this seminar, fill out the sign up form OR call us at (866) 674-6275.  Complimentary refreshments will be served.</string>
+                                <fontDescription key="fontDescription" type="system" pointSize="13"/>
+                                <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" misplaced="YES" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="12" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="1Na-qF-3SN">
+                                <rect key="frame" x="7" y="484" width="396" height="44"/>
+                                <string key="text">If you bring your most recent MRI films, CD, reports or CT scans to the seminar, you will have the opportunity to meet one-on-one with a physician. Please note that x-ray films are not acceptable to determine if you are a candidate for minimally invasive spine surgery.</string>
+                                <fontDescription key="fontDescription" type="boldSystem" pointSize="12"/>
+                                <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <button opaque="NO" contentMode="scaleToFill" ambiguous="YES" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="dqB-SF-MG3">
+                                <rect key="frame" x="20" y="550" width="128" height="30"/>
+                                <state key="normal" title="Fill out registration"/>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="IAJ-Ti-CPU">
+                                <rect key="frame" x="156" y="550" width="131" height="30"/>
+                                <accessibility key="accessibilityConfiguration">
+                                    <accessibilityTraits key="traits" button="YES" notEnabled="YES"/>
+                                </accessibility>
+                                <state key="normal" title="Submit registration">
+                                    <color key="titleColor" red="0.0018469241286051079" green="0.70837279040404044" blue="0.17847839069746393" alpha="1" colorSpace="calibratedRGB"/>
+                                </state>
+                                <state key="disabled" title="Submit registration">
+                                    <color key="titleColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Ngp-lo-ZUd">
+                                <rect key="frame" x="305" y="550" width="48" height="30"/>
+                                <state key="normal" title="Cancel">
+                                    <color key="titleColor" red="0.78375552400000004" green="0.05504809494" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                </state>
+                                <connections>
+                                    <action selector="returnToSeminarView:" destination="XWD-mR-dos" eventType="touchUpInside" id="PB3-Ba-mXb"/>
+                                    <segue destination="OIs-qt-Ykx" kind="show" identifier="returnToResultsView" id="2dc-SW-fga"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="Lwg-ew-vBR" firstAttribute="centerX" secondItem="1HS-o9-LeT" secondAttribute="centerX" id="AEx-nb-Gjm"/>
+                            <constraint firstItem="1Na-qF-3SN" firstAttribute="leading" secondItem="xZA-Sh-zVg" secondAttribute="leading" id="AjA-mu-s5n"/>
+                            <constraint firstItem="URy-GL-Vmd" firstAttribute="leading" secondItem="1HS-o9-LeT" secondAttribute="leadingMargin" constant="-13" id="BVI-Ew-Bgd"/>
+                            <constraint firstItem="7Ng-NB-0Mb" firstAttribute="leading" secondItem="DMX-el-YPv" secondAttribute="leading" id="NpF-8p-zAr"/>
+                            <constraint firstItem="URy-GL-Vmd" firstAttribute="top" secondItem="Lwg-ew-vBR" secondAttribute="bottom" constant="6" id="OwN-Ra-zWo"/>
+                            <constraint firstItem="Eco-jI-1ed" firstAttribute="top" secondItem="URy-GL-Vmd" secondAttribute="bottom" id="Qml-wc-auA"/>
+                            <constraint firstItem="IWx-ro-WpJ" firstAttribute="leading" secondItem="URy-GL-Vmd" secondAttribute="trailing" constant="32" id="Wbs-yF-Xp8"/>
+                            <constraint firstItem="Vpb-yl-vHZ" firstAttribute="leading" secondItem="xZA-Sh-zVg" secondAttribute="leading" id="Zfc-EZ-gv1"/>
+                            <constraint firstItem="DMX-el-YPv" firstAttribute="leading" secondItem="IWx-ro-WpJ" secondAttribute="leading" id="h4i-75-5Xu"/>
+                            <constraint firstAttribute="leadingMargin" secondItem="dqB-SF-MG3" secondAttribute="leading" id="wje-a5-qRa"/>
+                        </constraints>
+                    </view>
+                    <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina55"/>
+                    <connections>
+                        <outlet property="cancelButton" destination="Ngp-lo-ZUd" id="eed-8E-yNT"/>
+                        <outlet property="day" destination="Eco-jI-1ed" id="Gn2-W9-n17"/>
+                        <outlet property="fillOutSeminarRegistrationButton" destination="dqB-SF-MG3" id="WwA-P9-lu9"/>
+                        <outlet property="month" destination="URy-GL-Vmd" id="ulx-3L-13Z"/>
+                        <outlet property="seatsRemaning" destination="7Ng-NB-0Mb" id="ikh-G7-T4j"/>
+                        <outlet property="seminarBody" destination="DMX-el-YPv" id="bdf-8h-kjz"/>
+                        <outlet property="seminarMapDisplay" destination="Lwg-ew-vBR" id="uNJ-ZS-IOc"/>
+                        <outlet property="seminarTtitle" destination="IWx-ro-WpJ" id="NOw-Ed-WnG"/>
+                        <outlet property="submitRegistrationButton" destination="IAJ-Ti-CPU" id="WCB-so-zUE"/>
+                        <outlet property="time" destination="xZA-Sh-zVg" id="UGU-oU-OLA"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Fbh-pC-OwF" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1172" y="294"/>
         </scene>
     </scenes>
+    <inferredMetricsTieBreakers>
+        <segue reference="2dc-SW-fga"/>
+    </inferredMetricsTieBreakers>
 </document>

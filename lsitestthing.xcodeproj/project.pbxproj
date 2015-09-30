@@ -18,6 +18,8 @@
 		E516C4621BB1FEB2004D700C /* lsitestthingUITests.m in Sources */ = {isa = PBXBuildFile; fileRef = E516C4611BB1FEB2004D700C /* lsitestthingUITests.m */; };
 		E51D59ED1BB3509600C241BE /* TableResultsView.m in Sources */ = {isa = PBXBuildFile; fileRef = E51D59EC1BB3509600C241BE /* TableResultsView.m */; settings = {ASSET_TAGS = (); }; };
 		E51D59F11BB4960700C241BE /* CoreLocation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E51D59F01BB4960700C241BE /* CoreLocation.framework */; };
+		E546E9B11BBC20550014A262 /* SeminarDetailView.m in Sources */ = {isa = PBXBuildFile; fileRef = E546E9B01BBC20550014A262 /* SeminarDetailView.m */; settings = {ASSET_TAGS = (); }; };
+		E546E9B31BBC20710014A262 /* MapKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E546E9B21BBC20710014A262 /* MapKit.framework */; };
 		E58545341BB5C8AA009D49C9 /* lsi-logo-2x-1.png in Resources */ = {isa = PBXBuildFile; fileRef = E58545331BB5C8AA009D49C9 /* lsi-logo-2x-1.png */; settings = {ASSET_TAGS = (); }; };
 		E58545371BB5D73F009D49C9 /* CustomSeminarCell.m in Sources */ = {isa = PBXBuildFile; fileRef = E58545361BB5D73F009D49C9 /* CustomSeminarCell.m */; settings = {ASSET_TAGS = (); }; };
 		E5A8DD411BBB11200095DA81 /* testing.plist in Resources */ = {isa = PBXBuildFile; fileRef = E5A8DD401BBB11200095DA81 /* testing.plist */; settings = {ASSET_TAGS = (); }; };
@@ -61,6 +63,9 @@
 		E51D59EB1BB3509600C241BE /* TableResultsView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TableResultsView.h; sourceTree = "<group>"; };
 		E51D59EC1BB3509600C241BE /* TableResultsView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TableResultsView.m; sourceTree = "<group>"; };
 		E51D59F01BB4960700C241BE /* CoreLocation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreLocation.framework; path = System/Library/Frameworks/CoreLocation.framework; sourceTree = SDKROOT; };
+		E546E9AF1BBC20550014A262 /* SeminarDetailView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SeminarDetailView.h; sourceTree = "<group>"; };
+		E546E9B01BBC20550014A262 /* SeminarDetailView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SeminarDetailView.m; sourceTree = "<group>"; };
+		E546E9B21BBC20710014A262 /* MapKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MapKit.framework; path = System/Library/Frameworks/MapKit.framework; sourceTree = SDKROOT; };
 		E58545331BB5C8AA009D49C9 /* lsi-logo-2x-1.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "lsi-logo-2x-1.png"; sourceTree = "<group>"; };
 		E58545351BB5D73F009D49C9 /* CustomSeminarCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CustomSeminarCell.h; sourceTree = "<group>"; };
 		E58545361BB5D73F009D49C9 /* CustomSeminarCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CustomSeminarCell.m; sourceTree = "<group>"; };
@@ -72,6 +77,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				E546E9B31BBC20710014A262 /* MapKit.framework in Frameworks */,
 				E51D59F11BB4960700C241BE /* CoreLocation.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -96,6 +102,7 @@
 		E516C42D1BB1FEB2004D700C = {
 			isa = PBXGroup;
 			children = (
+				E546E9B21BBC20710014A262 /* MapKit.framework */,
 				E5A8DD401BBB11200095DA81 /* testing.plist */,
 				E51D59F01BB4960700C241BE /* CoreLocation.framework */,
 				E516C4381BB1FEB2004D700C /* lsitestthing */,
@@ -131,6 +138,8 @@
 				E516C4391BB1FEB2004D700C /* Supporting Files */,
 				E51D59EB1BB3509600C241BE /* TableResultsView.h */,
 				E51D59EC1BB3509600C241BE /* TableResultsView.m */,
+				E546E9AF1BBC20550014A262 /* SeminarDetailView.h */,
+				E546E9B01BBC20550014A262 /* SeminarDetailView.m */,
 				E58545351BB5D73F009D49C9 /* CustomSeminarCell.h */,
 				E58545361BB5D73F009D49C9 /* CustomSeminarCell.m */,
 			);
@@ -312,6 +321,7 @@
 				E516C43B1BB1FEB2004D700C /* main.m in Sources */,
 				E516C4471BB1FEB2004D700C /* lsitestthing.xcdatamodeld in Sources */,
 				E51D59ED1BB3509600C241BE /* TableResultsView.m in Sources */,
+				E546E9B11BBC20550014A262 /* SeminarDetailView.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

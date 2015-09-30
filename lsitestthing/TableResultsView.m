@@ -7,6 +7,7 @@
 //
 
 #import "TableResultsView.h"
+#import "SeminarDetailView.h"
 
 @implementation TableResultsView
 
@@ -16,19 +17,11 @@
     NSLog(@"KEPT API response: %@", [self.jsonResults debugDescription]);
     NSLog(@"KEPT ZIP: %@", self.zipCode);
     NSLog(@"KEPT ZIP CODE API response: %@", [self.zipCodeResults debugDescription]);
-//    NSMutableArray *tempArray = [[NSMutableArray alloc]init];
-//    
-//    if(self.zipCodeResults != nil){
-//        for (NSDictionary *seminarItem in self.jsonResults) {
-//            if ([self.zipCodeResults containsObject:[seminarItem objectForKey:@"zip"]] == YES) {
-//                NSLog(@"seminar: %@", [seminarItem objectForKey:@"zip"]);
-//                [tempArray addObject:seminarItem];
-//            }
-//        }
-//        NSLog(@"temp seminar: %@", [tempArray debugDescription]);
-//        self.jsonResults = nil;
-//        self.jsonResults = tempArray;
-//    }
+
+    if ([self.zipCodeResults isEqual:nil] == NO) {
+        
+    }
+    
     self.mainTable.delegate = self;
     self.mainTable.dataSource = self;
     
@@ -104,12 +97,38 @@
     [bodyText appendString:[NSString stringWithFormat:@"%@ ",  [[self.jsonResults objectAtIndex:indexPath.row] valueForKey:@"state"]]];
     [bodyText appendString:[NSString stringWithFormat:@"%@",   [[self.jsonResults objectAtIndex:indexPath.row] valueForKey:@"zip"]]];
 
-
+    self.selectedSeminar = [self.jsonResults objectAtIndex:indexPath.row];
     
-    UIAlertController *seminarDescription = [UIAlertController alertControllerWithTitle:@"Seminar Details" message:bodyText preferredStyle:UIAlertControllerStyleAlert];
+    UIAlertController *seminarDescription = [UIAlertController alertControllerWithTitle:@"Seminar Details" message:bodyText preferredStyle:UIAlertControllerStyleActionSheet];
     [seminarDescription addAction:[UIAlertAction actionWithTitle:@"OK" style:UIAlertActionStyleCancel handler:nil]];
+    [seminarDescription addAction:[UIAlertAction actionWithTitle:@"Register for this seminar" style:UIAlertActionStyleDefault handler:^(UIAlertAction * _Nonnull action) {
+         [self performSegueWithIdentifier:@"moveToSeminarDetailView" sender:nil];
+    }]];
     [self presentViewController:seminarDescription animated:YES completion:nil];
 }
 
+-(void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender{
 
+    SeminarDetailView *instanceDestinationControllerResultsView = segue.destinationViewController;
+    instanceDestinationControllerResultsView.selectedSeminar = self.selectedSeminar;
+    
+    NSMutableString *addressForLookup = [NSMutableString stringWithString:[self.selectedSeminar valueForKey:@"address"]];
+    [addressForLookup appendString:[NSString stringWithFormat:@"%@, ", [self.selectedSeminar valueForKey:@"city"]]];
+    
+    [addressForLookup appendString:[NSString stringWithFormat:@"%@, ", [self.selectedSeminar valueForKey:@"state"]]];
+    
+    [addressForLookup appendString:[NSString stringWithFormat:@"%@ ", [self.selectedSeminar valueForKey:@"zip"]]];
+
+    [addressForLookup appendString:[NSString stringWithFormat:@"%@, ", [self.selectedSeminar valueForKey:@"country"]]];
+                                  
+    CLGeocoder *getGpsCoordsFromAddress = [[CLGeocoder alloc]init];
+    
+    
+    [getGpsCoordsFromAddress geocodeAddressString:addressForLookup completionHandler:^(NSArray<CLPlacemark *> * _Nullable placemarks, NSError * _Nullable error) {
+        NSLog(@"Got coords? %@", placemarks.firstObject.debugDescription);
+        instanceDestinationControllerResultsView.seminarLocationOnMap = placemarks.firstObject;
+    }];
+    
+    
+}
 @end
