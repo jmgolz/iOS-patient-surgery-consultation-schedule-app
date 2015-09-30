@@ -112,23 +112,5 @@
     SeminarDetailView *instanceDestinationControllerResultsView = segue.destinationViewController;
     instanceDestinationControllerResultsView.selectedSeminar = self.selectedSeminar;
     
-    NSMutableString *addressForLookup = [NSMutableString stringWithString:[self.selectedSeminar valueForKey:@"address"]];
-    [addressForLookup appendString:[NSString stringWithFormat:@"%@, ", [self.selectedSeminar valueForKey:@"city"]]];
-    
-    [addressForLookup appendString:[NSString stringWithFormat:@"%@, ", [self.selectedSeminar valueForKey:@"state"]]];
-    
-    [addressForLookup appendString:[NSString stringWithFormat:@"%@ ", [self.selectedSeminar valueForKey:@"zip"]]];
-
-    [addressForLookup appendString:[NSString stringWithFormat:@"%@, ", [self.selectedSeminar valueForKey:@"country"]]];
-                                  
-    CLGeocoder *getGpsCoordsFromAddress = [[CLGeocoder alloc]init];
-    
-    
-    [getGpsCoordsFromAddress geocodeAddressString:addressForLookup completionHandler:^(NSArray<CLPlacemark *> * _Nullable placemarks, NSError * _Nullable error) {
-        NSLog(@"Got coords? %@", placemarks.firstObject.debugDescription);
-        instanceDestinationControllerResultsView.seminarLocationOnMap = placemarks.firstObject;
-    }];
-    
-    
 }
 @end

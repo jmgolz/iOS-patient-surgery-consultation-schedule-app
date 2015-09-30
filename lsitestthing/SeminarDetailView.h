@@ -23,6 +23,7 @@
 @property (weak, nonatomic) IBOutlet UIButton *cancelButton;
 @property (weak, nonatomic) IBOutlet UIButton *submitRegistrationButton;
 @property (weak, nonatomic) IBOutlet UIButton *fillOutSeminarRegistrationButton;
+@property NSMutableString *addressForLookup;
 
 
 @end
