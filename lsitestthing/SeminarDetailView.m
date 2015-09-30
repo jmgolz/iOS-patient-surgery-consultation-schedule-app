@@ -17,7 +17,7 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     // Do any additional setup after loading the view.
-    self.cancelButton.enabled = NO;
+    self.submitRegistrationButton.enabled = NO;
     [self getMapLocation];
     
     NSMutableString *seatsRemaining = [NSMutableString stringWithString:[self.selectedSeminar valueForKey:@"seats_avail"]];
@@ -53,7 +53,7 @@
     
     [getGpsCoordsFromAddress geocodeAddressString:self.addressForLookup completionHandler:^(NSArray<CLPlacemark *> * _Nullable placemarks, NSError * _Nullable error) {
         self.seminarLocationOnMap = placemarks.firstObject;
-        MKCoordinateRegion mapRegion = MKCoordinateRegionMakeWithDistance(self.seminarLocationOnMap.location.coordinate, 2200, 2200);
+        MKCoordinateRegion mapRegion = MKCoordinateRegionMakeWithDistance(self.seminarLocationOnMap.location.coordinate, 6200, 6200);
         MKPointAnnotation *point = [[MKPointAnnotation alloc] init];
         
         point.coordinate = self.seminarLocationOnMap.location.coordinate;

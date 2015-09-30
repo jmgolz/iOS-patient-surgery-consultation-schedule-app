@@ -69,7 +69,7 @@
 		E58545331BB5C8AA009D49C9 /* lsi-logo-2x-1.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "lsi-logo-2x-1.png"; sourceTree = "<group>"; };
 		E58545351BB5D73F009D49C9 /* CustomSeminarCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CustomSeminarCell.h; sourceTree = "<group>"; };
 		E58545361BB5D73F009D49C9 /* CustomSeminarCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CustomSeminarCell.m; sourceTree = "<group>"; };
-		E5A8DD401BBB11200095DA81 /* testing.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = testing.plist; sourceTree = "<group>"; };
+		E5A8DD401BBB11200095DA81 /* testing.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; name = testing.plist; path = ../testing.plist; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -103,7 +103,6 @@
 			isa = PBXGroup;
 			children = (
 				E546E9B21BBC20710014A262 /* MapKit.framework */,
-				E5A8DD401BBB11200095DA81 /* testing.plist */,
 				E51D59F01BB4960700C241BE /* CoreLocation.framework */,
 				E516C4381BB1FEB2004D700C /* lsitestthing */,
 				E516C4551BB1FEB2004D700C /* lsitestthingTests */,
@@ -133,6 +132,7 @@
 				E516C4421BB1FEB2004D700C /* Main.storyboard */,
 				E516C4481BB1FEB2004D700C /* Assets.xcassets */,
 				E516C44A1BB1FEB2004D700C /* LaunchScreen.storyboard */,
+				E5A8DD401BBB11200095DA81 /* testing.plist */,
 				E516C44D1BB1FEB2004D700C /* Info.plist */,
 				E516C4451BB1FEB2004D700C /* lsitestthing.xcdatamodeld */,
 				E516C4391BB1FEB2004D700C /* Supporting Files */,

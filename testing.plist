@@ -141,7 +141,8 @@
     city = &quot;Mayfield Heights&quot;;
     country = USA;
     custom = &quot;&lt;null&gt;&quot;;
-    directions = &quot;&lt;null&gt;&quot;;
+    directions = &quot;&lt;null&gt;&quot;;
+
     hidden = 0;
     host = &quot;Laser Spine Institute of Cleveland&quot;;
     id = 1811;
