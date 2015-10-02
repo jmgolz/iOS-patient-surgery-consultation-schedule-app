@@ -11,11 +11,12 @@ static const NSString *apiUrlBase = @"http://api.laserspineinstitute.com/";
 
 @interface ApiConnectionsHandler : NSObject
 
-@property (strong, nonatomic) NSMutableArray *jsonDataFrom;
+@property (strong, nonatomic) NSMutableArray *jsonSeminarDataFromApi;
+@property (strong, nonatomic) NSMutableArray *jsonZipcodeDataFromApi;
 @property NSURLSession *apiInteractionSession;
 
-- (NSData*)getApiSeminarData:(id)sender;
-- (NSData*)getApiZipCodeData:(id)sender;
+- (void)getApiSeminarData:(NSURLSession*)connectionHandler;
+- (void)getApiZipCodeData:(NSURLSession*)connectionHandler;
 
 
 @end

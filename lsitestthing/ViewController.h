@@ -8,6 +8,7 @@
 
 #import <UIKit/UIKit.h>
 #import <CoreLocation/CoreLocation.h>
+#import "ApiConnectionsHandler.h"
 
 @interface ViewController : UIViewController<CLLocationManagerDelegate>
 @property (strong, nonatomic) IBOutlet UISwipeGestureRecognizer *swipeGestureRecognizer;
@@ -18,6 +19,8 @@
 @property (strong, nonatomic) CLLocationManager *locationManager;
 @property (weak, nonatomic) IBOutlet UISwitch *toggleUseLocation;
 @property NSURLSession *apiInteractionSession;
+
+@property ApiConnectionsHandler *apiConnectionHandler;
 
 @property NSString *zipCode;
 @property (strong, nonatomic) NSMutableArray *zipCodeResults;

@@ -23,6 +23,8 @@
     self.locationManager = [[CLLocationManager alloc] init];
     self.zipCodeResults = [[NSMutableArray alloc] init];
     self.locationManager.delegate = self;
+    
+    self.apiConnectionHandler = [[ApiConnectionsHandler alloc] init];
 }
 - (IBAction)enableLocationServices:(id)sender {
     NSLog(@"clicked button");
