@@ -8,8 +8,12 @@
 
 #import <UIKit/UIKit.h>
 #import <MapKit/MapKit.h>
+#import "TableResultsView.h"
+
 @interface SeminarDetailView : UIViewController
 @property (weak, nonatomic) IBOutlet MKMapView *seminarMapDisplay;
+
+@property NSMutableArray *allSeminars;
 @property NSDictionary *selectedSeminar;
 @property CLPlacemark *seminarLocationOnMap;
 

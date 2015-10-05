@@ -39,7 +39,8 @@
 }
 
 -(void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender{
-
+    TableResultsView *instanceDestinationViewController = [segue destinationViewController];
+    instanceDestinationViewController.jsonResults = self.allSeminars;
 }
 
 -(void)getMapLocation{

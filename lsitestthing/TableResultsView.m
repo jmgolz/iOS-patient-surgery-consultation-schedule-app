@@ -9,21 +9,34 @@
 #import "TableResultsView.h"
 #import "SeminarDetailView.h"
 
+
 @implementation TableResultsView
 
 -(void)viewDidLoad{
     [super viewDidLoad];
     
+    self.apiInteractionSession = [NSURLSession sharedSession];
+    self.apiConnectionHandler = [[ApiConnectionsHandler alloc] init];
+    self.apiConnectionHandler.delegate = self;
+
+    
     NSLog(@"KEPT API response: %@", [self.jsonResults debugDescription]);
     NSLog(@"KEPT ZIP: %@", self.zipCode);
     NSLog(@"KEPT ZIP CODE API response: %@", [self.zipCodeResults debugDescription]);
-
-    if ([self.zipCodeResults isEqual:nil] == NO) {
-        
-    }
     
-    self.mainTable.delegate = self;
     self.mainTable.dataSource = self;
+    self.mainTable.delegate = self;
+}
+
+-(void)apiInteractionComplete:(NSMutableArray*)returnedData error:(NSError*)error apiEndpointUsed:(NSString*)apiEndpoint{
+    
+    if ([apiEndpoint isEqualToString:@"seminars"] == YES) {
+        self.jsonResults = returnedData;
+        NSLog(@"json results were retrieved: %@", [self.jsonResults debugDescription]);
+        self.mainTable.dataSource = self;
+    } else if ([apiEndpoint isEqualToString:@"zipcode"]){
+        self.zipCodeResults = returnedData;
+    }
     
 }
 
@@ -108,9 +121,8 @@
 }
 
 -(void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender{
-
     SeminarDetailView *instanceDestinationControllerResultsView = segue.destinationViewController;
     instanceDestinationControllerResultsView.selectedSeminar = self.selectedSeminar;
-    
+    instanceDestinationControllerResultsView.allSeminars = self.jsonResults;
 }
 @end
