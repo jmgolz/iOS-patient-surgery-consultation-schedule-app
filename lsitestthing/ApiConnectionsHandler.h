@@ -15,8 +15,6 @@ static const NSString *zipcodeEndpointURLFragment = @"zip/radius.json?";
 
 @interface ApiConnectionsHandler : NSObject
 @property (weak, nonatomic) id<ApiConnectionsHandlerDelegate> delegate;
-@property (strong, nonatomic) NSMutableArray *jsonSeminarDataFromApi;
-@property (strong, nonatomic) NSMutableArray *jsonZipcodeDataFromApi;
 @property NSURLSession *apiInteractionSession;
 
 - (void)getApiSeminarData:(NSURLSession*)connectionHandler;
