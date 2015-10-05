@@ -10,7 +10,7 @@
 #import <CoreLocation/CoreLocation.h>
 #import "ApiConnectionsHandler.h"
 
-@interface ViewController : UIViewController<CLLocationManagerDelegate>
+@interface ViewController : UIViewController<CLLocationManagerDelegate, ApiConnectionsHandlerDelegate>
 @property (strong, nonatomic) IBOutlet UISwipeGestureRecognizer *swipeGestureRecognizer;
 @property (strong, nonatomic) IBOutlet UIView *searchResultsView;
 @property (strong, nonatomic) IBOutlet UIView *mainScreenView;
@@ -26,6 +26,7 @@
 @property (strong, nonatomic) NSMutableArray *zipCodeResults;
 
 - (IBAction)getApiData:(id)sender;
+-(void)apiInteractionComplete:(NSMutableArray*)returnedData error:(NSError*)error apiEndpointUsed:(NSString*)apiEndpoint;
 
 @end
 

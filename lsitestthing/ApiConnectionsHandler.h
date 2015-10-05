@@ -8,15 +8,22 @@
 
 #import <Foundation/Foundation.h>
 static const NSString *apiUrlBase = @"http://api.laserspineinstitute.com/";
+static const NSString *seminarsEndpointURLFragment = @"seminars.json";
+static const NSString *zipcodeEndpointURLFragment = @"zip/radius.json?";
+
+@protocol ApiConnectionsHandlerDelegate;
 
 @interface ApiConnectionsHandler : NSObject
-
+@property (weak, nonatomic) id<ApiConnectionsHandlerDelegate> delegate;
 @property (strong, nonatomic) NSMutableArray *jsonSeminarDataFromApi;
 @property (strong, nonatomic) NSMutableArray *jsonZipcodeDataFromApi;
 @property NSURLSession *apiInteractionSession;
 
 - (void)getApiSeminarData:(NSURLSession*)connectionHandler;
 - (void)getApiZipCodeData:(NSURLSession*)connectionHandler;
+@end
 
-
+@protocol ApiConnectionsHandlerDelegate <NSObject>
+@optional
+-(void)apiInteractionComplete:(NSMutableArray*)returnedData error:(NSError*)error apiEndpointUsed:(NSString*)apiEndpoint;
 @end

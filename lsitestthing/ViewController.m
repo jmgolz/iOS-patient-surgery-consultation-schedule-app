@@ -25,6 +25,8 @@
     self.locationManager.delegate = self;
     
     self.apiConnectionHandler = [[ApiConnectionsHandler alloc] init];
+    self.apiConnectionHandler.delegate = self;
+
 }
 - (IBAction)enableLocationServices:(id)sender {
     NSLog(@"clicked button");
@@ -38,23 +40,37 @@
     
 }
 
+-(void)apiInteractionComplete:(NSMutableArray*)returnedData error:(NSError*)error apiEndpointUsed:(NSString*)apiEndpoint{
+    
+    if ([apiEndpoint isEqualToString:@"seminars"] == YES) {
+        self.jsonobj = returnedData;
+        [self performSegueWithIdentifier:@"test" sender:nil];
+    } else if ([apiEndpoint isEqualToString:@"zipcode"]){
+        self.zipCodeResults = returnedData;
+    }
+    
+}
+
 - (void)didReceiveMemoryWarning {
     [super didReceiveMemoryWarning];
     // Dispose of any resources that can be recreated.
 }
 
 - (IBAction)getApiData:(id)sender {
-    NSString *apiUrlBase = @"http://api.laserspineinstitute.com/seminars.json";
+//    NSString *apiUrlBase = @"http://api.laserspineinstitute.com/seminars.json";
+//    
+//    [[self.apiInteractionSession
+//      dataTaskWithURL:[NSURL URLWithString:apiUrlBase]
+//      completionHandler:^(NSData * _Nullable data, NSURLResponse * _Nullable response, NSError * _Nullable error)
+//      {
+//          NSError *jsonError = nil;
+//          self.jsonobj = [NSJSONSerialization JSONObjectWithData:data options:0 error:&jsonError];
+//          NSLog(@"Got API response: %@", [[self.jsonobj objectAtIndex:0] valueForKey:@"host"]);
+//          [self performSegueWithIdentifier:@"test" sender:sender];
+//      }] resume];
     
-    [[self.apiInteractionSession
-      dataTaskWithURL:[NSURL URLWithString:apiUrlBase]
-      completionHandler:^(NSData * _Nullable data, NSURLResponse * _Nullable response, NSError * _Nullable error)
-      {
-          NSError *jsonError = nil;
-          self.jsonobj = [NSJSONSerialization JSONObjectWithData:data options:0 error:&jsonError];
-          NSLog(@"Got API response: %@", [[self.jsonobj objectAtIndex:0] valueForKey:@"host"]);
-          [self performSegueWithIdentifier:@"test" sender:sender];
-      }] resume];
+    [self.apiConnectionHandler getApiSeminarData:self.apiInteractionSession];
+    
     
 }
 
