@@ -24,6 +24,9 @@
 		E58545341BB5C8AA009D49C9 /* lsi-logo-2x-1.png in Resources */ = {isa = PBXBuildFile; fileRef = E58545331BB5C8AA009D49C9 /* lsi-logo-2x-1.png */; settings = {ASSET_TAGS = (); }; };
 		E58545371BB5D73F009D49C9 /* CustomSeminarCell.m in Sources */ = {isa = PBXBuildFile; fileRef = E58545361BB5D73F009D49C9 /* CustomSeminarCell.m */; settings = {ASSET_TAGS = (); }; };
 		E5A8DD411BBB11200095DA81 /* testing.plist in Resources */ = {isa = PBXBuildFile; fileRef = E5A8DD401BBB11200095DA81 /* testing.plist */; settings = {ASSET_TAGS = (); }; };
+		E5B1EFFD1BC2CC7B00ECEA51 /* SeminarRegistrationUserView.m in Sources */ = {isa = PBXBuildFile; fileRef = E5B1EFFC1BC2CC7B00ECEA51 /* SeminarRegistrationUserView.m */; settings = {ASSET_TAGS = (); }; };
+		E5B1F0001BC2CCA600ECEA51 /* SeminarRegistrationMedicalView.m in Sources */ = {isa = PBXBuildFile; fileRef = E5B1EFFF1BC2CCA600ECEA51 /* SeminarRegistrationMedicalView.m */; settings = {ASSET_TAGS = (); }; };
+		E5B1F0031BC2E89700ECEA51 /* RegistrationFormNavigationController.m in Sources */ = {isa = PBXBuildFile; fileRef = E5B1F0021BC2E89700ECEA51 /* RegistrationFormNavigationController.m */; settings = {ASSET_TAGS = (); }; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -73,6 +76,12 @@
 		E58545351BB5D73F009D49C9 /* CustomSeminarCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CustomSeminarCell.h; sourceTree = "<group>"; };
 		E58545361BB5D73F009D49C9 /* CustomSeminarCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CustomSeminarCell.m; sourceTree = "<group>"; };
 		E5A8DD401BBB11200095DA81 /* testing.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; name = testing.plist; path = ../testing.plist; sourceTree = "<group>"; };
+		E5B1EFFB1BC2CC7B00ECEA51 /* SeminarRegistrationUserView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SeminarRegistrationUserView.h; sourceTree = "<group>"; };
+		E5B1EFFC1BC2CC7B00ECEA51 /* SeminarRegistrationUserView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SeminarRegistrationUserView.m; sourceTree = "<group>"; };
+		E5B1EFFE1BC2CCA600ECEA51 /* SeminarRegistrationMedicalView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SeminarRegistrationMedicalView.h; sourceTree = "<group>"; };
+		E5B1EFFF1BC2CCA600ECEA51 /* SeminarRegistrationMedicalView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SeminarRegistrationMedicalView.m; sourceTree = "<group>"; };
+		E5B1F0011BC2E89700ECEA51 /* RegistrationFormNavigationController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = RegistrationFormNavigationController.h; path = ../RegistrationFormNavigationController.h; sourceTree = "<group>"; };
+		E5B1F0021BC2E89700ECEA51 /* RegistrationFormNavigationController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = RegistrationFormNavigationController.m; path = ../RegistrationFormNavigationController.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -127,6 +136,8 @@
 		E516C4381BB1FEB2004D700C /* lsitestthing */ = {
 			isa = PBXGroup;
 			children = (
+				E5B1F0011BC2E89700ECEA51 /* RegistrationFormNavigationController.h */,
+				E5B1F0021BC2E89700ECEA51 /* RegistrationFormNavigationController.m */,
 				E58545301BB5C828009D49C9 /* images */,
 				E516C43C1BB1FEB2004D700C /* AppDelegate.h */,
 				E516C43D1BB1FEB2004D700C /* AppDelegate.m */,
@@ -147,6 +158,10 @@
 				E58545361BB5D73F009D49C9 /* CustomSeminarCell.m */,
 				E50DFF331BBDCC8F00869B13 /* ApiConnectionsHandler.h */,
 				E50DFF341BBDCC8F00869B13 /* ApiConnectionsHandler.m */,
+				E5B1EFFB1BC2CC7B00ECEA51 /* SeminarRegistrationUserView.h */,
+				E5B1EFFC1BC2CC7B00ECEA51 /* SeminarRegistrationUserView.m */,
+				E5B1EFFE1BC2CCA600ECEA51 /* SeminarRegistrationMedicalView.h */,
+				E5B1EFFF1BC2CCA600ECEA51 /* SeminarRegistrationMedicalView.m */,
 			);
 			path = lsitestthing;
 			sourceTree = "<group>";
@@ -320,6 +335,8 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				E5B1F0001BC2CCA600ECEA51 /* SeminarRegistrationMedicalView.m in Sources */,
+				E5B1F0031BC2E89700ECEA51 /* RegistrationFormNavigationController.m in Sources */,
 				E516C4411BB1FEB2004D700C /* ViewController.m in Sources */,
 				E516C43E1BB1FEB2004D700C /* AppDelegate.m in Sources */,
 				E58545371BB5D73F009D49C9 /* CustomSeminarCell.m in Sources */,
@@ -327,6 +344,7 @@
 				E516C4471BB1FEB2004D700C /* lsitestthing.xcdatamodeld in Sources */,
 				E50DFF351BBDCC8F00869B13 /* ApiConnectionsHandler.m in Sources */,
 				E51D59ED1BB3509600C241BE /* TableResultsView.m in Sources */,
+				E5B1EFFD1BC2CC7B00ECEA51 /* SeminarRegistrationUserView.m in Sources */,
 				E546E9B11BBC20550014A262 /* SeminarDetailView.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

@@ -39,8 +39,12 @@
 }
 
 -(void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender{
-    TableResultsView *instanceDestinationViewController = [segue destinationViewController];
-    instanceDestinationViewController.jsonResults = self.allSeminars;
+    if ([segue.identifier isEqualToString:@"returnToResultsView"]) {
+        TableResultsView *instanceDestinationViewController = [segue destinationViewController];
+        instanceDestinationViewController.jsonResults = self.allSeminars;        
+    }
+//        TableResultsView *instanceDestinationViewController = [segue destinationViewController];
+//        instanceDestinationViewController.jsonResults = self.allSeminars;
 }
 
 -(void)getMapLocation{

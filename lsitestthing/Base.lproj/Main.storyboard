@@ -271,6 +271,9 @@
                             <button opaque="NO" contentMode="scaleToFill" ambiguous="YES" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="dqB-SF-MG3">
                                 <rect key="frame" x="20" y="618" width="128" height="30"/>
                                 <state key="normal" title="Fill out registration"/>
+                                <connections>
+                                    <segue destination="qya-0q-xd3" kind="show" id="W3i-IP-VUW"/>
+                                </connections>
                             </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
@@ -302,7 +305,100 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Fbh-pC-OwF" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1172" y="294"/>
+            <point key="canvasLocation" x="1146" y="-179"/>
+        </scene>
+        <!--Registration Form-->
+        <scene sceneID="PXY-AN-4Br">
+            <objects>
+                <tabBarController title="Registration Form" id="qya-0q-xd3" customClass="RegistrationFormNavigationController" sceneMemberID="viewController">
+                    <extendedEdge key="edgesForExtendedLayout" top="YES"/>
+                    <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina55"/>
+                    <tabBar key="tabBar" contentMode="scaleToFill" id="gwb-60-ki3">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="49"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                    </tabBar>
+                    <connections>
+                        <outlet property="registrationFormControllerTabBar" destination="gwb-60-ki3" id="NJ3-n2-Gko"/>
+                        <segue destination="CKD-zU-5oj" kind="relationship" relationship="viewControllers" id="Kd6-jL-BcJ"/>
+                        <segue destination="bAD-Yr-tyw" kind="relationship" relationship="viewControllers" id="pRN-rQ-Vhu"/>
+                    </connections>
+                </tabBarController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="vKA-yo-jw3" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1027" y="954"/>
+        </scene>
+        <!--Seminar Registration User-->
+        <scene sceneID="i3x-gE-EGS">
+            <objects>
+                <viewController storyboardIdentifier="seminarRegistrationUser" title="Seminar Registration User" useStoryboardIdentifierAsRestorationIdentifier="YES" id="CKD-zU-5oj" customClass="SeminarRegistrationUserView" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="jP2-Aw-uiE"/>
+                        <viewControllerLayoutGuide type="bottom" id="SgZ-AI-2BF"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="WcJ-eO-O23">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="736"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="REGISTRATION - USER INFO" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumFontSize="9" adjustsLetterSpacingToFitWidth="YES" translatesAutoresizingMaskIntoConstraints="NO" id="4FQ-F0-BCN">
+                                <rect key="frame" x="97" y="20" width="221" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="4FQ-F0-BCN" firstAttribute="top" secondItem="WcJ-eO-O23" secondAttribute="topMargin" constant="20" id="0nu-eN-cqY"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="4FQ-F0-BCN" secondAttribute="trailing" constant="76" id="rKz-fa-yh0"/>
+                            <constraint firstItem="4FQ-F0-BCN" firstAttribute="leading" secondItem="WcJ-eO-O23" secondAttribute="leadingMargin" constant="77" id="rc8-4g-cu0"/>
+                            <constraint firstItem="4FQ-F0-BCN" firstAttribute="centerX" secondItem="WcJ-eO-O23" secondAttribute="centerX" id="wkB-Yu-l1Z"/>
+                        </constraints>
+                    </view>
+                    <tabBarItem key="tabBarItem" title="User Info" id="R4i-tg-Q2N">
+                        <offsetWrapper key="titlePositionAdjustment" horizontal="0.0" vertical="-5"/>
+                    </tabBarItem>
+                    <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina55"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="R3R-fC-SM9" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1658" y="571"/>
+        </scene>
+        <!--Seminar Registration Medical-->
+        <scene sceneID="Bo5-8m-LVX">
+            <objects>
+                <viewController storyboardIdentifier="seminarRegistrationMedical" title="Seminar Registration Medical" useStoryboardIdentifierAsRestorationIdentifier="YES" id="bAD-Yr-tyw" customClass="SeminarRegistrationMedicalView" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="eW6-40-PX7"/>
+                        <viewControllerLayoutGuide type="bottom" id="DH1-GA-jQI"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="b1I-JN-4C3">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="736"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="REGISTRATION - MEDICAL" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumFontSize="9" adjustsLetterSpacingToFitWidth="YES" translatesAutoresizingMaskIntoConstraints="NO" id="L6Q-h6-NIw">
+                                <rect key="frame" x="104" y="20" width="207" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstAttribute="trailingMargin" secondItem="L6Q-h6-NIw" secondAttribute="trailing" constant="83" id="8Kr-Yu-Rmq"/>
+                            <constraint firstItem="L6Q-h6-NIw" firstAttribute="top" secondItem="eW6-40-PX7" secondAttribute="bottom" id="Qle-xd-d6D"/>
+                            <constraint firstItem="L6Q-h6-NIw" firstAttribute="leading" secondItem="b1I-JN-4C3" secondAttribute="leadingMargin" constant="84" id="R38-lI-JFl"/>
+                            <constraint firstItem="L6Q-h6-NIw" firstAttribute="centerX" secondItem="b1I-JN-4C3" secondAttribute="centerX" id="mpg-M7-wq5"/>
+                        </constraints>
+                    </view>
+                    <tabBarItem key="tabBarItem" tag="1" title="Medical/Insurance" id="rU2-Xy-tvs">
+                        <offsetWrapper key="titlePositionAdjustment" horizontal="0.0" vertical="-5"/>
+                    </tabBarItem>
+                    <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina55"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="LP5-f6-aAJ" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1658" y="1459"/>
         </scene>
     </scenes>
     <inferredMetricsTieBreakers>
