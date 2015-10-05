@@ -10,9 +10,14 @@
 
 
 //@interface SeminarRegistrationUserView : UIViewController<UIPageViewControllerDataSource>
-@interface SeminarRegistrationUserView : UIViewController
+@interface SeminarRegistrationUserView : UIViewController<UIPickerViewDataSource, UIPickerViewDelegate>
+
 @property NSUInteger pageIndex;
 @property (strong, nonatomic) UIPageViewController *pageViewController;
 
+@property (weak, nonatomic) IBOutlet UIPickerView *statePicker;
+@property NSArray *statesListAbbrev;
+@property NSArray *statesListFullName;
 
+-(void)makeStatesList;
 @end
