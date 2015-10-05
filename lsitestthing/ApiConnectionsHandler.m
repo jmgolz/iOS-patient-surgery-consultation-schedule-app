@@ -26,8 +26,12 @@
     }] resume];
 }
 
-- (void)getApiZipCodeData:(NSURLSession*)connectionHandler{
+- (void)getApiZipCodeData:(NSURLSession*)connectionHandler zipCode:(NSString*)zipCode{
     NSMutableString *apiUrlEndpoint = [NSMutableString stringWithFormat:@"%@zip/radius.json?", apiUrlBase];
+    [apiUrlEndpoint appendString:[NSString stringWithFormat:@"zip=%@", zipCode]];
+    [apiUrlEndpoint appendString:@"&radius=100&fields=ZipCode"];
+    
+    
     NSURLRequest *apiConnectionRequest = [[NSURLRequest alloc] initWithURL:[NSURL URLWithString:apiUrlEndpoint] cachePolicy:NSURLRequestUseProtocolCachePolicy timeoutInterval:5.0];
 
     
@@ -42,7 +46,5 @@
 
     }] resume];
 }
--(void)apiInteractionComplete:(NSMutableArray*)returnedData error:(NSError*)error apiEndpointUsed:(NSString*)apiEndpoint{
-
-}
+-(void)apiInteractionComplete:(NSMutableArray*)returnedData error:(NSError*)error apiEndpointUsed:(NSString*)apiEndpoint{}
 @end

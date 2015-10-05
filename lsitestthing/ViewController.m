@@ -57,21 +57,7 @@
 }
 
 - (IBAction)getApiData:(id)sender {
-//    NSString *apiUrlBase = @"http://api.laserspineinstitute.com/seminars.json";
-//    
-//    [[self.apiInteractionSession
-//      dataTaskWithURL:[NSURL URLWithString:apiUrlBase]
-//      completionHandler:^(NSData * _Nullable data, NSURLResponse * _Nullable response, NSError * _Nullable error)
-//      {
-//          NSError *jsonError = nil;
-//          self.jsonobj = [NSJSONSerialization JSONObjectWithData:data options:0 error:&jsonError];
-//          NSLog(@"Got API response: %@", [[self.jsonobj objectAtIndex:0] valueForKey:@"host"]);
-//          [self performSegueWithIdentifier:@"test" sender:sender];
-//      }] resume];
-    
     [self.apiConnectionHandler getApiSeminarData:self.apiInteractionSession];
-    
-    
 }
 
 -(void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender{
@@ -95,29 +81,10 @@
     
     CLGeocoder *geocoder = [[CLGeocoder alloc] init];
     CLLocation *currentLocation = [locations lastObject];
-    NSMutableString *zipCodeURL = [NSMutableString stringWithString:@"http://api.laserspineinstitute.com/zip/radius.json?"];
     
     [geocoder reverseGeocodeLocation:currentLocation completionHandler:^(NSArray<CLPlacemark *> * _Nullable placemarks, NSError * _Nullable error) {
         self.zipCode = [[[placemarks objectAtIndex:0] addressDictionary] objectForKey:@"ZIP"];
-        
-        [zipCodeURL appendString:[NSString stringWithFormat:@"zip=%@", self.zipCode]];
-        [zipCodeURL appendString:@"&radius=100&fields=ZipCode"];
-        
-        [[self.apiInteractionSession
-          dataTaskWithURL:[NSURL URLWithString:zipCodeURL]
-          completionHandler:^(NSData * _Nullable data, NSURLResponse * _Nullable response, NSError * _Nullable error)
-          {
-              NSError *jsonGetZipError = nil;
-              NSMutableArray *tempZipCodeResults = [[NSMutableArray alloc]init];
-              
-              tempZipCodeResults = [NSJSONSerialization JSONObjectWithData:data options:0 error:&jsonGetZipError];
-              
-              for ( NSDictionary *zipCode in tempZipCodeResults) {
-                  [self.zipCodeResults addObject:[zipCode objectForKey:@"ZipCode"]];
-              }
-              //NSLog(@"Got ZIP CODE API response: %@", [self.zipCodeResults debugDescription]);
-              
-          }] resume];
+        [self.apiConnectionHandler getApiZipCodeData:self.apiInteractionSession zipCode:self.zipCode];
         [self.locationManager stopUpdatingLocation];
     }];
 }

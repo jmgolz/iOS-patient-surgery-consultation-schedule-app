@@ -20,7 +20,7 @@ static const NSString *zipcodeEndpointURLFragment = @"zip/radius.json?";
 @property NSURLSession *apiInteractionSession;
 
 - (void)getApiSeminarData:(NSURLSession*)connectionHandler;
-- (void)getApiZipCodeData:(NSURLSession*)connectionHandler;
+- (void)getApiZipCodeData:(NSURLSession*)connectionHandler zipCode:(NSString*)zipCode;
 @end
 
 @protocol ApiConnectionsHandlerDelegate <NSObject>
