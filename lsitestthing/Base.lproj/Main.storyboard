@@ -559,6 +559,22 @@
                             <pickerView contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="pNW-Ma-bBC">
                                 <rect key="frame" x="20" y="572" width="374" height="66"/>
                             </pickerView>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="qFw-sw-UWA">
+                                <rect key="frame" x="21" y="681" width="96" height="30"/>
+                                <state key="normal" title="Save Data">
+                                    <color key="titleColor" red="0.0018469241289999999" green="0.70837279040000001" blue="0.17847839069999999" alpha="1" colorSpace="calibratedRGB"/>
+                                </state>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Fef-ZT-7Cf">
+                                <rect key="frame" x="312" y="681" width="82" height="30"/>
+                                <state key="normal" title="Cancel">
+                                    <color key="titleColor" red="0.78375552400000004" green="0.05504809494" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                </state>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Cxw-Fo-F0I">
+                                <rect key="frame" x="172" y="681" width="82" height="30"/>
+                                <state key="normal" title="Clear Form"/>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
