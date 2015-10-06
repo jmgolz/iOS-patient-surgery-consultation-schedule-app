@@ -27,6 +27,7 @@
 		E5B1EFFD1BC2CC7B00ECEA51 /* SeminarRegistrationUserView.m in Sources */ = {isa = PBXBuildFile; fileRef = E5B1EFFC1BC2CC7B00ECEA51 /* SeminarRegistrationUserView.m */; settings = {ASSET_TAGS = (); }; };
 		E5B1F0001BC2CCA600ECEA51 /* SeminarRegistrationMedicalView.m in Sources */ = {isa = PBXBuildFile; fileRef = E5B1EFFF1BC2CCA600ECEA51 /* SeminarRegistrationMedicalView.m */; settings = {ASSET_TAGS = (); }; };
 		E5B1F0031BC2E89700ECEA51 /* RegistrationFormNavigationController.m in Sources */ = {isa = PBXBuildFile; fileRef = E5B1F0021BC2E89700ECEA51 /* RegistrationFormNavigationController.m */; settings = {ASSET_TAGS = (); }; };
+		E5F225761BC44E4B0090098A /* applicationReusableData.plist in Resources */ = {isa = PBXBuildFile; fileRef = E5F225751BC44E4B0090098A /* applicationReusableData.plist */; settings = {ASSET_TAGS = (); }; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -82,6 +83,7 @@
 		E5B1EFFF1BC2CCA600ECEA51 /* SeminarRegistrationMedicalView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SeminarRegistrationMedicalView.m; sourceTree = "<group>"; };
 		E5B1F0011BC2E89700ECEA51 /* RegistrationFormNavigationController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = RegistrationFormNavigationController.h; path = ../RegistrationFormNavigationController.h; sourceTree = "<group>"; };
 		E5B1F0021BC2E89700ECEA51 /* RegistrationFormNavigationController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = RegistrationFormNavigationController.m; path = ../RegistrationFormNavigationController.m; sourceTree = "<group>"; };
+		E5F225751BC44E4B0090098A /* applicationReusableData.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = applicationReusableData.plist; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -162,6 +164,7 @@
 				E5B1EFFC1BC2CC7B00ECEA51 /* SeminarRegistrationUserView.m */,
 				E5B1EFFE1BC2CCA600ECEA51 /* SeminarRegistrationMedicalView.h */,
 				E5B1EFFF1BC2CCA600ECEA51 /* SeminarRegistrationMedicalView.m */,
+				E5F225751BC44E4B0090098A /* applicationReusableData.plist */,
 			);
 			path = lsitestthing;
 			sourceTree = "<group>";
@@ -306,6 +309,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				E5F225761BC44E4B0090098A /* applicationReusableData.plist in Resources */,
 				E516C44C1BB1FEB2004D700C /* LaunchScreen.storyboard in Resources */,
 				E516C4491BB1FEB2004D700C /* Assets.xcassets in Resources */,
 				E516C4441BB1FEB2004D700C /* Main.storyboard in Resources */,

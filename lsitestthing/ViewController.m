@@ -30,6 +30,10 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
+    NSArray *getPlistData = [[NSArray arrayWithContentsOfFile:[[NSBundle mainBundle] pathForResource:@"applicationReusableData" ofType:@"plist"]] objectAtIndex:0];
+    
+    NSLog(@"DEBUG: %@", [[getPlistData objectAtIndex:0] objectForKey:@"stateFullName"]);
+    
     // Do any additional setup after loading the view, typically from a nib.
     self.apiInteractionSession = [NSURLSession sharedSession];
     self.locationManager = [[CLLocationManager alloc] init];

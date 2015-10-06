@@ -1,0 +1,357 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<array>
+	<array>
+        <dict>
+            <key>stateAbbrev</key>
+            <string>AL</string>
+            <key>stateFullName</key>
+            <string>Alabama</string>
+        </dict>
+        
+        <dict>
+            <key>stateFullName</key>
+            <string>Alaska</string>
+            <key>stateAbbrev</key>
+            <string>AK</string>
+        </dict>
+        
+        <dict>
+            <key>stateFullName</key>
+            <string>Arizona</string>
+            <key>stateAbbrev</key>
+            <string>AZ</string>
+        </dict>
+        
+        <dict>
+            <key>stateFullName</key>
+            <string>Arkansas</string>
+            <key>stateAbbrev</key>
+            <string>AR</string>
+        </dict>
+        
+        <dict>
+            <key>stateFullName</key>
+            <string>California</string>
+            <key>stateAbbrev</key>
+            <string>CA</string>
+        </dict>
+        
+        <dict>
+            <key>stateFullName</key>
+            <string>Colorado</string>
+            <key>stateAbbrev</key>
+            <string>CO</string>
+        </dict>
+        
+        <dict>
+            <key>stateFullName</key>
+            <string>Connecticut</string>
+            <key>stateAbbrev</key>
+            <string>CT</string>
+        </dict>
+        
+        <dict>
+            <key>stateFullName</key>
+            <string>Delaware</string>
+            <key>stateAbbrev</key>
+            <string>DE</string>
+        </dict>
+        
+        <dict>
+            <key>stateFullName</key>
+            <string>Florida</string>
+            <key>stateAbbrev</key>
+            <string>FL</string>
+        </dict>
+        
+        <dict>
+            <key>stateFullName</key>
+            <string>Georgia</string>
+            <key>stateAbbrev</key>
+            <string>GA</string>
+        </dict>
+        
+        <dict>
+            <key>stateFullName</key>
+            <string>Hawaii</string>
+            <key>stateAbbrev</key>
+            <string>HI</string>
+        </dict>
+        
+        <dict>
+            <key>stateFullName</key>
+            <string>Idaho</string>
+            <key>stateAbbrev</key>
+            <string>ID</string>
+        </dict>
+        
+        <dict>
+            <key>stateFullName</key>
+            <string>Illinois</string>
+            <key>stateAbbrev</key>
+            <string>IL</string>
+        </dict>
+        
+        <dict>
+            <key>stateFullName</key>
+            <string>Indiana</string>
+            <key>stateAbbrev</key>
+            <string>IN</string>
+        </dict>
+        
+        <dict>
+            <key>stateFullName</key>
+            <string>Iowa</string>
+            <key>stateAbbrev</key>
+            <string>IA</string>
+        </dict>
+        
+        <dict>
+            <key>stateFullName</key>
+            <string>Kansas</string>
+            <key>stateAbbrev</key>
+            <string>KS</string>
+        </dict>
+        
+        <dict>
+            <key>stateFullName</key>
+            <string>Kentucky</string>
+            <key>stateAbbrev</key>
+            <string>KY</string>
+        </dict>
+        
+        <dict>
+            <key>stateFullName</key>
+            <string>Louisiana</string>
+            <key>stateAbbrev</key>
+            <string>LA</string>
+        </dict>
+        
+        <dict>
+            <key>stateFullName</key>
+            <string>Maine</string>
+            <key>stateAbbrev</key>
+            <string>ME</string>
+        </dict>
+        
+        <dict>
+            <key>stateFullName</key>
+            <string>Maryland</string>
+            <key>stateAbbrev</key>
+            <string>MD</string>
+        </dict>
+        
+        <dict>
+            <key>stateFullName</key>
+            <string>Massachusetts</string>
+            <key>stateAbbrev</key>
+            <string>MA</string>
+        </dict>
+        
+        <dict>
+            <key>stateFullName</key>
+            <string>Michigan</string>
+            <key>stateAbbrev</key>
+            <string>MI</string>
+        </dict>
+        
+        <dict>
+            <key>stateFullName</key>
+            <string>Minnesota</string>
+            <key>stateAbbrev</key>
+            <string>MN</string>
+        </dict>
+        
+        <dict>
+            <key>stateFullName</key>
+            <string>Mississippi</string>
+            <key>stateAbbrev</key>
+            <string>MS</string>
+        </dict>
+        
+        <dict>
+            <key>stateFullName</key>
+            <string>Missouri</string>
+            <key>stateAbbrev</key>
+            <string>MO</string>
+        </dict>
+        
+        <dict>
+            <key>stateFullName</key>
+            <string>Montana</string>
+            <key>stateAbbrev</key>
+            <string>MT</string>
+        </dict>
+        
+        <dict>
+            <key>stateFullName</key>
+            <string>Nebraska</string>
+            <key>stateAbbrev</key>
+            <string>NE</string>
+        </dict>
+        
+        <dict>
+            <key>stateFullName</key>
+            <string>Nevada</string>
+            <key>stateAbbrev</key>
+            <string>NV</string>
+        </dict>
+        
+        <dict>
+            <key>stateFullName</key>
+            <string>New Hampshire</string>
+            <key>stateAbbrev</key>
+            <string>NH</string>
+        </dict>
+        
+        <dict>
+            <key>stateFullName</key>
+            <string>New Jersey</string>
+            <key>stateAbbrev</key>
+            <string>NJ</string>
+        </dict>
+        
+        <dict>
+            <key>stateFullName</key>
+            <string>New Mexico</string>
+            <key>stateAbbrev</key>
+            <string>NM</string>
+        </dict>
+        
+        <dict>
+            <key>stateFullName</key>
+            <string>New York</string>
+            <key>stateAbbrev</key>
+            <string>NY</string>
+        </dict>
+        
+        <dict>
+            <key>stateFullName</key>
+            <string>North Carolina</string>
+            <key>stateAbbrev</key>
+            <string>NC</string>
+        </dict>
+        
+        <dict>
+            <key>stateFullName</key>
+            <string>North Dakota</string>
+            <key>stateAbbrev</key>
+            <string>ND</string>
+        </dict>
+        
+        <dict>
+            <key>stateFullName</key>
+            <string>Ohio</string>
+            <key>stateAbbrev</key>
+            <string>OH</string>
+        </dict>
+        
+        <dict>
+            <key>stateFullName</key>
+            <string>Oklahoma</string>
+            <key>stateAbbrev</key>
+            <string>OK</string>
+        </dict>
+        
+        <dict>
+            <key>stateFullName</key>
+            <string>Oregon</string>
+            <key>stateAbbrev</key>
+            <string>OR</string>
+        </dict>
+        
+        <dict>
+            <key>stateFullName</key>
+            <string>Pennsylvania</string>
+            <key>stateAbbrev</key>
+            <string>PA</string>
+        </dict>
+        
+        <dict>
+            <key>stateFullName</key>
+            <string>Rhode Island</string>
+            <key>stateAbbrev</key>
+            <string>RI</string>
+        </dict>
+        
+        <dict>
+            <key>stateFullName</key>
+            <string>South Carolina</string>
+            <key>stateAbbrev</key>
+            <string>SC</string>
+        </dict>
+        
+        <dict>
+            <key>stateFullName</key>
+            <string>SouthDakota</string>
+            <key>stateAbbrev</key>
+            <string>SD</string>
+        </dict>
+        
+        <dict>
+            <key>stateFullName</key>
+            <string>Tennessee</string>
+            <key>stateAbbrev</key>
+            <string>TN</string>
+        </dict>
+        
+        <dict>
+            <key>stateFullName</key>
+            <string>Texas</string>
+            <key>stateAbbrev</key>
+            <string>TX</string>
+        </dict>
+        
+        <dict>
+            <key>stateFullName</key>
+            <string>Utah</string>
+            <key>stateAbbrev</key>
+            <string>UT</string>
+        </dict>
+        
+        <dict>
+            <key>stateFullName</key>
+            <string>Vermont</string>
+            <key>stateAbbrev</key>
+            <string>VT</string>
+        </dict>
+        
+        <dict>
+            <key>stateFullName</key>
+            <string>Virginia</string>
+            <key>stateAbbrev</key>
+            <string>VA</string>
+        </dict>
+        
+        <dict>
+            <key>stateFullName</key>
+            <string>Washington</string>
+            <key>stateAbbrev</key>
+            <string>WA</string>
+        </dict>
+        
+        <dict>
+            <key>stateFullName</key>
+            <string>West Virginia</string>
+            <key>stateAbbrev</key>
+            <string>WV</string>
+        </dict>
+        
+        <dict>
+            <key>stateFullName</key>
+            <string>Wisconsin</string>
+            <key>stateAbbrev</key>
+            <string>WI</string>
+        </dict>
+        
+        <dict>
+            <key>stateFullName</key>
+            <string>Wyoming</string>
+            <key>stateAbbrev</key>
+            <string>WY</string>
+        </dict>
+	</array>
+</array>
+</plist>

@@ -8,8 +8,6 @@
 
 #import <UIKit/UIKit.h>
 
-
-//@interface SeminarRegistrationUserView : UIViewController<UIPageViewControllerDataSource>
 @interface SeminarRegistrationUserView : UIViewController<UIPickerViewDataSource, UIPickerViewDelegate>
 
 @property NSUInteger pageIndex;
@@ -42,9 +40,7 @@
 @property (weak, nonatomic) IBOutlet UIButton *cancelButton;
 
 
-//Data sources (TODO: move to plist)
-@property NSArray *statesListAbbrev;
-@property NSArray *statesListFullName;
+//Data sources
+@property NSArray *statesAbbrevAndFullNamesDataSource;
 
--(void)makeStatesList;
 @end
