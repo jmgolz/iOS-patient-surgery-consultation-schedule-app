@@ -3,6 +3,7 @@
 <plist version="1.0">
 <array>
 	<array>
+        <!--Item 0 - US States -->
         <dict>
             <key>stateAbbrev</key>
             <string>AL</string>
@@ -353,14 +354,18 @@
             <string>WY</string>
         </dict>
 	</array>
+    <!--Item 0 - US States -->
     
+    <!--Item 1 - Time Zones -->
     <array>
         <string>Eastern</string>
         <string>Central</string>
         <string>Mountain</string>
         <string>Western</string>
     </array>
+    <!--Item 1 - Time Zones -->
     
+    <!--Item 2 - Best time to call -->
     <array>
             <string>8am - 10am</string>
             <string>10am - 12pm</string>
@@ -370,5 +375,55 @@
             <string>Anytime</string>
             <string>Saturday</string>
     </array>
+    <!--Item 2 - Best time to call -->
+    
+    <!--Item 3 - Insurance -->
+    <array>
+        <string>Aetna</string>
+        <string>Anthem</string>
+        <string>Beech Street</string>
+        <string>Blue Cross Blue Shield</string>
+        <string>Cigna</string>
+        <string>Coventry</string>
+        <string>Empire</string>
+        <string>Humana</string>
+        <string>Kaiser Permanente</string>
+        <string>Medicaid - not accepted</string>
+        <string>Medicare</string>
+        <string>Multiplan</string>
+        <string>None</string>
+        <string>Not Listed</string>
+        <string>Tricare</string>
+        <string>United Health Care</string>
+        <string>Work Comp</string>
+    </array>
+    <!--Item 3 - Insurance -->
+    
+    <!--Item 4 - Insurance Type -->
+    <array>
+        <string>N/A</string>
+        <string>HMO</string>
+        <string>PPO</string>
+    </array>
+    <!--Item 4 - Insurance Type -->
+    
+    <!--Item 5 - How did you hear about us? -->
+    <array>
+        <string>Internet</string>
+        <string>Newspaper</string>
+        <string>Magazine</string>
+        <string>Radio</string>
+        <string>Television</string>
+        <string>Email Blast</string>
+        <string>Direct Mail</string>
+        <string>Billboard</string>
+        <string>Seminar</string>
+        <string>Social Media</string>
+        <string>Physician Referral</string>
+        <string>Patient Referral</string>
+        <string>Print Ads</string>
+        <string>Other</string>
+    </array>
+    <!--Item 5 - How did you hear about us? -->
 </array>
 </plist>

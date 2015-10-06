@@ -8,6 +8,6 @@
 
 #import <UIKit/UIKit.h>
 
-@interface SeminarRegistrationMedicalView : UIViewController
+@interface SeminarRegistrationMedicalView : UIViewController<UIPickerViewDataSource, UIPickerViewDelegate>
 
 @end
