@@ -15,7 +15,11 @@
 @property NSUInteger pageIndex;
 @property (strong, nonatomic) UIPageViewController *pageViewController;
 
+
+//Selection pickers 
 @property (weak, nonatomic) IBOutlet UIPickerView *statePicker;
+
+
 @property NSArray *statesListAbbrev;
 @property NSArray *statesListFullName;
 
