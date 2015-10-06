@@ -16,10 +16,33 @@
 @property (strong, nonatomic) UIPageViewController *pageViewController;
 
 
-//Selection pickers 
+//Selection pickers
 @property (weak, nonatomic) IBOutlet UIPickerView *statePicker;
+@property (weak, nonatomic) IBOutlet UIPickerView *timeZonePicker;
+@property (weak, nonatomic) IBOutlet UIPickerView *bestTimeToCallPicker;
+
+//Text fields for main user info
+@property (weak, nonatomic) IBOutlet UITextField *firstNameField;
+@property (weak, nonatomic) IBOutlet UITextField *lastNameField;
+
+@property (weak, nonatomic) IBOutlet UITextField *streetAddressField;
+@property (weak, nonatomic) IBOutlet UITextField *secondAddressField;
+@property (weak, nonatomic) IBOutlet UITextField *cityField;
+@property (weak, nonatomic) IBOutlet UITextField *zipcodeField;
+
+@property (weak, nonatomic) IBOutlet UITextField *areaCodeField;
+@property (weak, nonatomic) IBOutlet UITextField *phoneNumberFirstThreeDigitsField;
+@property (weak, nonatomic) IBOutlet UITextField *phoneNumberLastFourDigitsField;
+
+@property (weak, nonatomic) IBOutlet UITextField *emailAddressField;
+
+//Save, clear, cancel buttons
+@property (weak, nonatomic) IBOutlet UIButton *saveDataButton;
+@property (weak, nonatomic) IBOutlet UIButton *clearFormButton;
+@property (weak, nonatomic) IBOutlet UIButton *cancelButton;
 
 
+//Data sources (TODO: move to plist)
 @property NSArray *statesListAbbrev;
 @property NSArray *statesListFullName;
 
