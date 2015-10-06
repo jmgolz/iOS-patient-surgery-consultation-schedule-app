@@ -10,7 +10,7 @@
 #import <CoreLocation/CoreLocation.h>
 #import "ApiConnectionsHandler.h"
 
-static const BOOL APP_DEBUG = YES;
+static const BOOL APP_DEBUG = NO;
 
 @interface ViewController : UIViewController<CLLocationManagerDelegate, ApiConnectionsHandlerDelegate>
 @property (strong, nonatomic) IBOutlet UISwipeGestureRecognizer *swipeGestureRecognizer;

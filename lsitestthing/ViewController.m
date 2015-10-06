@@ -23,7 +23,8 @@
         
         NSData *jsonDataObj = [jsondataString dataUsingEncoding:NSUTF8StringEncoding];
         NSError *jsonDecodeError = nil;
-        self.jsonobj = [NSJSONSerialization JSONObjectWithData:jsonDataObj options:0 error:&jsonDecodeError];        
+        self.jsonobj = [NSJSONSerialization JSONObjectWithData:jsonDataObj options:0 error:&jsonDecodeError];
+        NSLog(@"DEBUGGING MODE!");
     }
 }
 
