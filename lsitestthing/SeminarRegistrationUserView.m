@@ -58,14 +58,6 @@
     // Dispose of any resources that can be recreated.
 }
 
-//-(NSInteger)presentationCountForPageViewController:(UIPageViewController *)pageViewController{
-//    return 2;
-//}
-//
-//-(NSInteger)presentationIndexForPageViewController:(UIPageViewController *)pageViewController{
-//    return 0;
-//}
-
 /*
 #pragma mark - Navigation
 
