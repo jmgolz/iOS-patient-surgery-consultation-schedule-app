@@ -14,28 +14,9 @@
 
 @implementation SeminarRegistrationMedicalView
 
-- (UIViewController *)pageViewController:(UIPageViewController *)pageViewController viewControllerBeforeViewController:(UIViewController *)viewController{
-    
-    return self;
-}
-
--(UIViewController *)pageViewController:(UIPageViewController *)pageViewController viewControllerAfterViewController:(UIViewController *)viewController{
-    
-    return self;
-}
-
 - (void)viewDidLoad {
     [super viewDidLoad];
     // Do any additional setup after loading the view.
-//    self.pageViewController = [self.storyboard instantiateViewControllerWithIdentifier:@"seminarRegistrationMedical"];
-//    self.pageViewController.dataSource = self;
-//    
-//    NSArray *viewControllersArray = @[self];
-//    [self.pageViewController setViewControllers:viewControllersArray direction:UIPageViewControllerNavigationDirectionForward animated:YES completion:nil];
-//    [self addChildViewController:self.pageViewController];
-//    [self.view addSubview:self.pageViewController.view];
-//    [self.pageViewController didMoveToParentViewController:self];
-
 
 }
 
@@ -43,14 +24,6 @@
     [super didReceiveMemoryWarning];
     // Dispose of any resources that can be recreated.
 }
-
-//-(NSInteger)presentationCountForPageViewController:(UIPageViewController *)pageViewController{
-//    return 2;
-//}
-//
-//-(NSInteger)presentationIndexForPageViewController:(UIPageViewController *)pageViewController{
-//    return 1;
-//}
 
 /*
 #pragma mark - Navigation

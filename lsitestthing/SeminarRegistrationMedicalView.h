@@ -8,8 +8,6 @@
 
 #import <UIKit/UIKit.h>
 
-
-//@interface SeminarRegistrationMedicalView : UIViewController<UIPageViewControllerDataSource>
 @interface SeminarRegistrationMedicalView : UIViewController
-@property (strong, nonatomic) UIPageViewController *pageViewController;
+
 @end
