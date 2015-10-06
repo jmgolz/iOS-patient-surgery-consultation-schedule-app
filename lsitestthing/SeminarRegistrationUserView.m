@@ -18,33 +18,43 @@
     return self;
 }
 
-- (UIViewController *)pageViewController:(UIPageViewController *)pageViewController viewControllerBeforeViewController:(UIViewController *)viewController{
-
-    return self;
-}
-
--(UIViewController *)pageViewController:(UIPageViewController *)pageViewController viewControllerAfterViewController:(UIViewController *)viewController{
-
-    
-    return self;
-}
-
-
-
 - (void)viewDidLoad {
     [super viewDidLoad];
     // Do any additional setup after loading the view.
     self.statePicker.delegate = self;
     self.statePicker.dataSource = self;
+    
+    self.timeZonePicker.delegate = self;
+    self.timeZonePicker.dataSource = self;
+    
+    self.bestTimeToCallPicker.delegate = self;
+    self.bestTimeToCallPicker.dataSource = self;
+    
     self.statesAbbrevAndFullNamesDataSource = [[NSArray arrayWithContentsOfFile:[[NSBundle mainBundle] pathForResource:@"applicationReusableData" ofType:@"plist"]] objectAtIndex:0];
+    
+    self.timeZoneDataSource = [[NSArray arrayWithContentsOfFile:[[NSBundle mainBundle] pathForResource:@"applicationReusableData" ofType:@"plist"]] objectAtIndex:1];
+    
+    self.bestTimeToCallDataSource = [[NSArray arrayWithContentsOfFile:[[NSBundle mainBundle] pathForResource:@"applicationReusableData" ofType:@"plist"]] objectAtIndex:2];
 }
 
 -(NSString *)pickerView:(UIPickerView *)pickerView titleForRow:(NSInteger)row forComponent:(NSInteger)component{
-    return [[self.statesAbbrevAndFullNamesDataSource objectAtIndex:row] objectForKey:@"stateFullName"];
+    if(pickerView.tag == 0){
+        return [[self.statesAbbrevAndFullNamesDataSource objectAtIndex:row] objectForKey:@"stateFullName"];
+    } else if(pickerView.tag == 1){
+        return [self.timeZoneDataSource objectAtIndex:row];
+    } else {
+        return [self.bestTimeToCallDataSource objectAtIndex:row];
+    }
 }
 
 -(NSInteger)pickerView:(UIPickerView *)pickerView numberOfRowsInComponent:(NSInteger)component{
-    return self.statesAbbrevAndFullNamesDataSource.count;
+    if(pickerView.tag == 0){
+        return self.statesAbbrevAndFullNamesDataSource.count;
+    } else if(pickerView.tag == 1){
+        return self.timeZoneDataSource.count;
+    } else {
+        return self.bestTimeToCallDataSource.count;
+    }
 }
 
 - (NSInteger)numberOfComponentsInPickerView:(UIPickerView *)pickerView{

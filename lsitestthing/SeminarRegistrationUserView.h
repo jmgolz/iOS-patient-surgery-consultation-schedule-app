@@ -42,5 +42,7 @@
 
 //Data sources
 @property NSArray *statesAbbrevAndFullNamesDataSource;
+@property NSArray *timeZoneDataSource;
+@property NSArray *bestTimeToCallDataSource;
 
 @end

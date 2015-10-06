@@ -353,5 +353,22 @@
             <string>WY</string>
         </dict>
 	</array>
+    
+    <array>
+        <string>Eastern</string>
+        <string>Central</string>
+        <string>Mountain</string>
+        <string>Western</string>
+    </array>
+    
+    <array>
+            <string>8am - 10am</string>
+            <string>10am - 12pm</string>
+            <string>12pm - 2pm</string>
+            <string>2pm - 4pm</string>
+            <string>4pm - 6pm</string>
+            <string>Anytime</string>
+            <string>Saturday</string>
+    </array>
 </array>
 </plist>
