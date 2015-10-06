@@ -16,6 +16,17 @@
 @implementation ViewController
 #define IS_OS_8_OR_LATER ([[[UIDevice currentDevice] systemVersion] floatValue] >= 8.0)
 
+-(void)viewWillAppear:(BOOL)animated{
+    if (APP_DEBUG == YES) {
+        NSString *getPlistPath = [[NSBundle mainBundle] pathForResource:@"testing" ofType:@"plist"];
+        NSString *jsondataString = [[NSDictionary dictionaryWithContentsOfFile:getPlistPath] objectForKey:@"testSeminarsResponseJson"];
+        
+        NSData *jsonDataObj = [jsondataString dataUsingEncoding:NSUTF8StringEncoding];
+        NSError *jsonDecodeError = nil;
+        self.jsonobj = [NSJSONSerialization JSONObjectWithData:jsonDataObj options:0 error:&jsonDecodeError];        
+    }
+}
+
 - (void)viewDidLoad {
     [super viewDidLoad];
     // Do any additional setup after loading the view, typically from a nib.
@@ -57,7 +68,11 @@
 }
 
 - (IBAction)getApiData:(id)sender {
-    [self.apiConnectionHandler getApiSeminarData:self.apiInteractionSession];
+    if (APP_DEBUG == YES) {
+        [self performSegueWithIdentifier:@"test" sender:nil];
+    } else {
+        [self.apiConnectionHandler getApiSeminarData:self.apiInteractionSession];
+    }
 }
 
 -(void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender{

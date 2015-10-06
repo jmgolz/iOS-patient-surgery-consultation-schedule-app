@@ -121,8 +121,8 @@
 }
 
 -(void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender{
-    SeminarDetailView *instanceDestinationControllerResultsView = segue.destinationViewController;
-    instanceDestinationControllerResultsView.selectedSeminar = self.selectedSeminar;
-    instanceDestinationControllerResultsView.allSeminars = self.jsonResults;
+        SeminarDetailView *instanceDestinationControllerResultsView = segue.destinationViewController;
+        instanceDestinationControllerResultsView.selectedSeminar = self.selectedSeminar;
+        instanceDestinationControllerResultsView.allSeminars = self.jsonResults;
 }
 @end
