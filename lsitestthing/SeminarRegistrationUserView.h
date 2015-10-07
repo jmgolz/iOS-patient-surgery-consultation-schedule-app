@@ -7,8 +7,9 @@
 //
 
 #import <UIKit/UIKit.h>
+#import <CoreData/CoreData.h>
 
-@interface SeminarRegistrationUserView : UIViewController<UIPickerViewDataSource, UIPickerViewDelegate>
+@interface SeminarRegistrationUserView : UIViewController<UIPickerViewDataSource, UIPickerViewDelegate, UITextFieldDelegate>
 
 @property NSUInteger pageIndex;
 @property (strong, nonatomic) UIPageViewController *pageViewController;
@@ -44,5 +45,6 @@
 @property NSArray *statesAbbrevAndFullNamesDataSource;
 @property NSArray *timeZoneDataSource;
 @property NSArray *bestTimeToCallDataSource;
+@property NSFetchedResultsController *fetchedResultsController;
 
 @end

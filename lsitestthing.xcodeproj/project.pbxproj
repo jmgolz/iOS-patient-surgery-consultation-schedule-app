@@ -29,6 +29,8 @@
 		E5B1F0031BC2E89700ECEA51 /* RegistrationFormNavigationController.m in Sources */ = {isa = PBXBuildFile; fileRef = E5B1F0021BC2E89700ECEA51 /* RegistrationFormNavigationController.m */; settings = {ASSET_TAGS = (); }; };
 		E5F225761BC44E4B0090098A /* applicationReusableData.plist in Resources */ = {isa = PBXBuildFile; fileRef = E5F225751BC44E4B0090098A /* applicationReusableData.plist */; settings = {ASSET_TAGS = (); }; };
 		E5F7D5BC1BC5730000794571 /* seminarRegistrationDataStorage.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = E5F7D5BA1BC5730000794571 /* seminarRegistrationDataStorage.xcdatamodeld */; settings = {ASSET_TAGS = (); }; };
+		E5F7D5BE1BC5772700794571 /* CoreData.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E5F7D5BD1BC5772700794571 /* CoreData.framework */; };
+		E5F7D5C11BC5906700794571 /* RegistrationFormDataController.m in Sources */ = {isa = PBXBuildFile; fileRef = E5F7D5C01BC5906700794571 /* RegistrationFormDataController.m */; settings = {ASSET_TAGS = (); }; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -86,6 +88,9 @@
 		E5B1F0021BC2E89700ECEA51 /* RegistrationFormNavigationController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = RegistrationFormNavigationController.m; path = ../RegistrationFormNavigationController.m; sourceTree = "<group>"; };
 		E5F225751BC44E4B0090098A /* applicationReusableData.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = applicationReusableData.plist; sourceTree = "<group>"; };
 		E5F7D5BB1BC5730000794571 /* seminarRegistrationDataStorage.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = seminarRegistrationDataStorage.xcdatamodel; sourceTree = "<group>"; };
+		E5F7D5BD1BC5772700794571 /* CoreData.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreData.framework; path = System/Library/Frameworks/CoreData.framework; sourceTree = SDKROOT; };
+		E5F7D5BF1BC5906700794571 /* RegistrationFormDataController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RegistrationFormDataController.h; sourceTree = "<group>"; };
+		E5F7D5C01BC5906700794571 /* RegistrationFormDataController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RegistrationFormDataController.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -93,6 +98,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				E5F7D5BE1BC5772700794571 /* CoreData.framework in Frameworks */,
 				E546E9B31BBC20710014A262 /* MapKit.framework in Frameworks */,
 				E51D59F11BB4960700C241BE /* CoreLocation.framework in Frameworks */,
 			);
@@ -118,7 +124,7 @@
 		E516C42D1BB1FEB2004D700C = {
 			isa = PBXGroup;
 			children = (
-				E5F7D5BA1BC5730000794571 /* seminarRegistrationDataStorage.xcdatamodeld */,
+				E5F7D5BD1BC5772700794571 /* CoreData.framework */,
 				E546E9B21BBC20710014A262 /* MapKit.framework */,
 				E51D59F01BB4960700C241BE /* CoreLocation.framework */,
 				E516C4381BB1FEB2004D700C /* lsitestthing */,
@@ -141,6 +147,7 @@
 		E516C4381BB1FEB2004D700C /* lsitestthing */ = {
 			isa = PBXGroup;
 			children = (
+				E5F7D5BA1BC5730000794571 /* seminarRegistrationDataStorage.xcdatamodeld */,
 				E5B1F0011BC2E89700ECEA51 /* RegistrationFormNavigationController.h */,
 				E5B1F0021BC2E89700ECEA51 /* RegistrationFormNavigationController.m */,
 				E58545301BB5C828009D49C9 /* images */,
@@ -168,6 +175,8 @@
 				E5B1EFFE1BC2CCA600ECEA51 /* SeminarRegistrationMedicalView.h */,
 				E5B1EFFF1BC2CCA600ECEA51 /* SeminarRegistrationMedicalView.m */,
 				E5F225751BC44E4B0090098A /* applicationReusableData.plist */,
+				E5F7D5BF1BC5906700794571 /* RegistrationFormDataController.h */,
+				E5F7D5C01BC5906700794571 /* RegistrationFormDataController.m */,
 			);
 			path = lsitestthing;
 			sourceTree = "<group>";
@@ -352,6 +361,7 @@
 				E516C4471BB1FEB2004D700C /* lsitestthing.xcdatamodeld in Sources */,
 				E50DFF351BBDCC8F00869B13 /* ApiConnectionsHandler.m in Sources */,
 				E51D59ED1BB3509600C241BE /* TableResultsView.m in Sources */,
+				E5F7D5C11BC5906700794571 /* RegistrationFormDataController.m in Sources */,
 				E5B1EFFD1BC2CC7B00ECEA51 /* SeminarRegistrationUserView.m in Sources */,
 				E546E9B11BBC20550014A262 /* SeminarDetailView.m in Sources */,
 			);
@@ -618,7 +628,8 @@
 				E5F7D5BB1BC5730000794571 /* seminarRegistrationDataStorage.xcdatamodel */,
 			);
 			currentVersion = E5F7D5BB1BC5730000794571 /* seminarRegistrationDataStorage.xcdatamodel */;
-			path = seminarRegistrationDataStorage.xcdatamodeld;
+			name = seminarRegistrationDataStorage.xcdatamodeld;
+			path = ../seminarRegistrationDataStorage.xcdatamodeld;
 			sourceTree = "<group>";
 			versionGroupType = wrapper.xcdatamodel;
 		};
