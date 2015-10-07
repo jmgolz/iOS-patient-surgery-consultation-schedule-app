@@ -79,5 +79,6 @@
 }
 
 - (IBAction)howManyInPatientPartyStepperButton:(id)sender {
+    self.numberInPatientPartyDisplay.text = [NSString stringWithFormat:@"%.0f", self.howManyInPatientPartyStepperButton.value];
 }
 @end

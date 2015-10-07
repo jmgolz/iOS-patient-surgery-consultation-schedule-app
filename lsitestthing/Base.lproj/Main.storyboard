@@ -541,7 +541,7 @@
                                     <action selector="patientIsBringingMriSegmentedButtonPressed:" destination="bAD-Yr-tyw" eventType="touchUpInside" id="RPH-E1-QMN"/>
                                 </connections>
                             </segmentedControl>
-                            <stepper opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" maximumValue="100" translatesAutoresizingMaskIntoConstraints="NO" id="YAF-fN-98u">
+                            <stepper opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" value="1" maximumValue="100" translatesAutoresizingMaskIntoConstraints="NO" id="YAF-fN-98u">
                                 <rect key="frame" x="170" y="464" width="94" height="29"/>
                                 <connections>
                                     <action selector="howManyInPatientPartyStepperButton:" destination="bAD-Yr-tyw" eventType="touchUpInside" id="Ovc-tj-Pls"/>
@@ -613,6 +613,7 @@
                         <outlet property="howManyInPatientPartyStepperButton" destination="YAF-fN-98u" id="ugA-Id-G08"/>
                         <outlet property="insuranceCompanyPicker" destination="Xlt-9k-9Ib" id="K9W-bs-bCi"/>
                         <outlet property="insuranceTypeSegmentedButton" destination="nNG-om-w16" id="YeX-HX-WfF"/>
+                        <outlet property="numberInPatientPartyDisplay" destination="txu-cc-dj1" id="ts8-lu-eLs"/>
                         <outlet property="patientIsBringingMriSegmentedButton" destination="1l3-7e-5Wy" id="Oz8-K4-CVr"/>
                         <outlet property="saveFormDataButton" destination="qFw-sw-UWA" id="5KL-ga-GqE"/>
                     </connections>

@@ -14,10 +14,12 @@
 @property (weak, nonatomic) IBOutlet UIPickerView *insuranceCompanyPicker;
 @property (weak, nonatomic) IBOutlet UIPickerView *howDidYouHearAboutUsPicker;
 
-//Buttons - form inputs
+//Buttons - form inputs/outputs
 @property (weak, nonatomic) IBOutlet UISegmentedControl *insuranceTypeSegmentedButton;
 @property (weak, nonatomic) IBOutlet UISegmentedControl *patientIsBringingMriSegmentedButton;
 @property (weak, nonatomic) IBOutlet UIStepper *howManyInPatientPartyStepperButton;
+@property (weak, nonatomic) IBOutlet UILabel *numberInPatientPartyDisplay;
+
 
 //Buttons - form actions
 @property (weak, nonatomic) IBOutlet UIButton *saveFormDataButton;
