@@ -22,8 +22,8 @@
     pageControl.currentPageIndicatorTintColor = [UIColor blackColor];
     pageControl.backgroundColor = [UIColor whiteColor];
     
-    self.dataController = [[RegistrationFormDataController alloc] init];
-    [self setDataController:self.dataController];
+//    self.dataController = [[RegistrationFormDataController alloc] init];
+//    [self setDataController:self.dataController];
     return YES;
 }
 

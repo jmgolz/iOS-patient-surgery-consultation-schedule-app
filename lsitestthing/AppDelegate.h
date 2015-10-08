@@ -18,7 +18,7 @@
 @property (readonly, strong, nonatomic) NSManagedObjectModel *managedObjectModel;
 @property (readonly, strong, nonatomic) NSPersistentStoreCoordinator *persistentStoreCoordinator;
 
-@property RegistrationFormDataController *dataController;
+//@property RegistrationFormDataController *dataController;
 
 - (void)saveContext;
 - (NSURL *)applicationDocumentsDirectory;

@@ -21,6 +21,8 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     // Do any additional setup after loading the view.
+    [self instantiateCoreDataStorageObject];
+    
     self.statePicker.delegate = self;
     self.statePicker.dataSource = self;
     
@@ -35,7 +37,23 @@
     self.timeZoneDataSource = [[NSArray arrayWithContentsOfFile:[[NSBundle mainBundle] pathForResource:@"applicationReusableData" ofType:@"plist"]] objectAtIndex:1];
     
     self.bestTimeToCallDataSource = [[NSArray arrayWithContentsOfFile:[[NSBundle mainBundle] pathForResource:@"applicationReusableData" ofType:@"plist"]] objectAtIndex:2];
+    //NSLog(@"data storage: %@", self.dataController.debugDescription);
     
+    
+    ///Test get data on form load...
+    NSError *dataRequestError = nil;
+    NSFetchRequest *dataStorageFetchRequest = [NSFetchRequest fetchRequestWithEntityName:@"UserFormData"];
+    NSSortDescriptor *sortByLastName = [NSSortDescriptor sortDescriptorWithKey:@"lastName" ascending:YES];
+    [dataStorageFetchRequest setSortDescriptors:@[sortByLastName]];
+    
+    NSArray *results = [[self.dataController managedObjectContext] executeFetchRequest:dataStorageFetchRequest error:&dataRequestError];
+    NSLog(@"Errors: %@\n%@", [dataRequestError localizedDescription], [dataRequestError userInfo]);
+    
+    UserFormDataStorageObject *resultsFromArray = [results objectAtIndex:0];
+
+    NSLog(@"Data? %@", [resultsFromArray phoneFirstThree]);
+    
+    //end test
     
 }
 
@@ -84,4 +102,88 @@
     [textField resignFirstResponder];
     return NO;
 }
+- (IBAction)saveUserRegistrationFormData:(id)sender {
+    UserFormDataStorageObject *makeSaveDataObject = [NSEntityDescription insertNewObjectForEntityForName:@"UserFormData" inManagedObjectContext:[self.dataController managedObjectContext]];
+    
+    makeSaveDataObject.streetAddress = @"test streetAddress";
+    makeSaveDataObject.address1 = @"test address1";
+    makeSaveDataObject.address2 = @"test address2";
+    makeSaveDataObject.city = @"test city";
+    makeSaveDataObject.state = @"test state";
+    makeSaveDataObject.zipCode = @"test zipCode";
+    
+    makeSaveDataObject.firstName = @"test firstName";
+    makeSaveDataObject.lastName = @"test lastName";
+    makeSaveDataObject.emailAddress = @"test emailAddress";
+    makeSaveDataObject.timeZone = @"test timeZone";
+    
+    makeSaveDataObject.bestTimeToCall = @"test bestTimeToCall";
+    makeSaveDataObject.areaCode = @"test areaCode";
+    makeSaveDataObject.phoneFirstThree = @"test phoneFirstThree";
+    makeSaveDataObject.phoneLastFour = @"test phoneLastFour";
+    
+    NSError *saveError = nil;
+    [[self.dataController managedObjectContext] insertObject:makeSaveDataObject];
+    
+    [[self.dataController managedObjectContext] save:&saveError];
+    
+    if(saveError != nil){
+        NSLog(@"Error saving data: %@\n%@", [saveError localizedDescription], [saveError userInfo]);
+    } else {
+        NSError *dataRequestError = nil;
+        NSFetchRequest *dataStorageFetchRequest = [NSFetchRequest fetchRequestWithEntityName:@"UserFormData"];
+        NSSortDescriptor *sortByLastName = [NSSortDescriptor sortDescriptorWithKey:@"lastName" ascending:YES];
+        [dataStorageFetchRequest setSortDescriptors:@[sortByLastName]];
+        
+        NSArray *results = [[self.dataController managedObjectContext] executeFetchRequest:dataStorageFetchRequest error:&dataRequestError];
+
+        if (!results) {
+            NSLog(@"Error fetching Employee objects: %@\n%@", [dataRequestError localizedDescription], [dataRequestError userInfo]);
+            abort();
+        } else {
+            NSLog(@"got data! %@", results.debugDescription);
+        }
+
+    }
+}
+
+- (IBAction)clearUserRegistrationFormData:(id)sender {
+}
+
+- (IBAction)cancelUserRegistrationFormFill:(id)sender {
+}
+
+- (void)instantiateCoreDataStorageObject{
+    self.dataController = [[RegistrationFormDataController alloc] init];
+    [self setDataController:self.dataController];
+    [[self fetchedResultsController] setDelegate:self];
+    
+    //NSFetchRequest *dataStorageFetchRequest = [NSFetchRequest fetchRequestWithEntityName:@"UserFormData"];
+    
+//        NSSortDescriptor *sortByLastName = [NSSortDescriptor sortDescriptorWithKey:@"lastName" ascending:YES];
+//        [dataStorageFetchRequest setSortDescriptors:@[sortByLastName]];
+    
+    
+    
+    
+    //    [self setFetchedResultsController:[[NSFetchedResultsController alloc] initWithFetchRequest:dataStorageFetchRequest managedObjectContext:[self.dataController managedObjectContext] sectionNameKeyPath:nil cacheName:nil]];
+    //
+    
+    //
+    
+    //NSError *error = nil;
+    //NSArray *results = [[self.dataController managedObjectContext] executeFetchRequest:dataStorageFetchRequest error:&error];
+    
+//    if (!results) {
+//        NSLog(@"Error fetching Employee objects: %@\n%@", [error localizedDescription], [error userInfo]);
+//        abort();
+//    } else {
+//        NSLog(@"got data! %@", results.debugDescription);
+//    }
+    //    if (![[self fetchedResultsController] performFetch:&error]) {
+    //        NSLog(@"Failed to initialize FetchedResultsController: %@\n%@", [error localizedDescription], [error userInfo]);
+    //        abort();
+    //    }
+}
+
 @end

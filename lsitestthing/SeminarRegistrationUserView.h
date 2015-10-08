@@ -8,8 +8,10 @@
 
 #import <UIKit/UIKit.h>
 #import <CoreData/CoreData.h>
+#import "RegistrationFormDataController.h"
+#import "userFormDataStorageObject.h"
 
-@interface SeminarRegistrationUserView : UIViewController<UIPickerViewDataSource, UIPickerViewDelegate, UITextFieldDelegate>
+@interface SeminarRegistrationUserView : UIViewController<UIPickerViewDataSource, UIPickerViewDelegate, UITextFieldDelegate, NSFetchedResultsControllerDelegate>
 
 @property NSUInteger pageIndex;
 @property (strong, nonatomic) UIPageViewController *pageViewController;
@@ -46,5 +48,13 @@
 @property NSArray *timeZoneDataSource;
 @property NSArray *bestTimeToCallDataSource;
 @property NSFetchedResultsController *fetchedResultsController;
+@property RegistrationFormDataController *dataController;
+
+//Form interaction methods
+- (IBAction)saveUserRegistrationFormData:(id)sender;
+- (IBAction)clearUserRegistrationFormData:(id)sender;
+- (IBAction)cancelUserRegistrationFormFill:(id)sender;
+- (void)instantiateCoreDataStorageObject;
+
 
 @end

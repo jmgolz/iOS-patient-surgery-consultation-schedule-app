@@ -31,6 +31,7 @@
 		E5F7D5BC1BC5730000794571 /* seminarRegistrationDataStorage.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = E5F7D5BA1BC5730000794571 /* seminarRegistrationDataStorage.xcdatamodeld */; settings = {ASSET_TAGS = (); }; };
 		E5F7D5BE1BC5772700794571 /* CoreData.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E5F7D5BD1BC5772700794571 /* CoreData.framework */; };
 		E5F7D5C11BC5906700794571 /* RegistrationFormDataController.m in Sources */ = {isa = PBXBuildFile; fileRef = E5F7D5C01BC5906700794571 /* RegistrationFormDataController.m */; settings = {ASSET_TAGS = (); }; };
+		E5F7D5C41BC6C15400794571 /* userFormDataStorageObject.m in Sources */ = {isa = PBXBuildFile; fileRef = E5F7D5C31BC6C15400794571 /* userFormDataStorageObject.m */; settings = {ASSET_TAGS = (); }; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -91,6 +92,8 @@
 		E5F7D5BD1BC5772700794571 /* CoreData.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreData.framework; path = System/Library/Frameworks/CoreData.framework; sourceTree = SDKROOT; };
 		E5F7D5BF1BC5906700794571 /* RegistrationFormDataController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RegistrationFormDataController.h; sourceTree = "<group>"; };
 		E5F7D5C01BC5906700794571 /* RegistrationFormDataController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RegistrationFormDataController.m; sourceTree = "<group>"; };
+		E5F7D5C21BC6C15400794571 /* userFormDataStorageObject.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = userFormDataStorageObject.h; path = ../userFormDataStorageObject.h; sourceTree = "<group>"; };
+		E5F7D5C31BC6C15400794571 /* userFormDataStorageObject.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = userFormDataStorageObject.m; path = ../userFormDataStorageObject.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -147,6 +150,8 @@
 		E516C4381BB1FEB2004D700C /* lsitestthing */ = {
 			isa = PBXGroup;
 			children = (
+				E5F7D5C21BC6C15400794571 /* userFormDataStorageObject.h */,
+				E5F7D5C31BC6C15400794571 /* userFormDataStorageObject.m */,
 				E5F7D5BA1BC5730000794571 /* seminarRegistrationDataStorage.xcdatamodeld */,
 				E5B1F0011BC2E89700ECEA51 /* RegistrationFormNavigationController.h */,
 				E5B1F0021BC2E89700ECEA51 /* RegistrationFormNavigationController.m */,
@@ -352,6 +357,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				E5F7D5BC1BC5730000794571 /* seminarRegistrationDataStorage.xcdatamodeld in Sources */,
+				E5F7D5C41BC6C15400794571 /* userFormDataStorageObject.m in Sources */,
 				E5B1F0001BC2CCA600ECEA51 /* SeminarRegistrationMedicalView.m in Sources */,
 				E5B1F0031BC2E89700ECEA51 /* RegistrationFormNavigationController.m in Sources */,
 				E516C4411BB1FEB2004D700C /* ViewController.m in Sources */,

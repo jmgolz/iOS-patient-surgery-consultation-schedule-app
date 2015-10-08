@@ -410,6 +410,14 @@
                                     <outlet property="delegate" destination="CKD-zU-5oj" id="hSw-B6-bdk"/>
                                 </connections>
                             </textField>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Last 4 Digits" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="OOE-Fw-atS">
+                                <rect key="frame" x="297" y="270" width="97" height="30"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                                <connections>
+                                    <outlet property="delegate" destination="CKD-zU-5oj" id="f2Z-Gd-IIJ"/>
+                                </connections>
+                            </textField>
                             <pickerView contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="O3G-IJ-gfT">
                                 <rect key="frame" x="70" y="385" width="324" height="70"/>
                             </pickerView>
@@ -420,38 +428,38 @@
                                 <nil key="highlightedColor"/>
                             </label>
                             <pickerView tag="1" contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="73b-nH-2xW">
-                                <rect key="frame" x="20" y="540" width="148" height="70"/>
+                                <rect key="frame" x="20" y="503" width="148" height="70"/>
                             </pickerView>
                             <pickerView tag="2" contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="UV9-EJ-2yn">
-                                <rect key="frame" x="260" y="540" width="134" height="70"/>
+                                <rect key="frame" x="260" y="503" width="134" height="70"/>
                             </pickerView>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Time Zone" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="MeO-Lq-9xG">
-                                <rect key="frame" x="20" y="500" width="148" height="21"/>
+                                <rect key="frame" x="20" y="463" width="148" height="21"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Best Time to Call" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="VFz-Nm-mId">
-                                <rect key="frame" x="264" y="500" width="130" height="21"/>
+                                <rect key="frame" x="264" y="463" width="130" height="21"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="eOD-cF-zel">
-                                <rect key="frame" x="21" y="686" width="96" height="30"/>
+                                <rect key="frame" x="20" y="601" width="96" height="33"/>
                                 <state key="normal" title="Save Data">
                                     <color key="titleColor" red="0.0018469241289999999" green="0.70837279040000001" blue="0.17847839069999999" alpha="1" colorSpace="calibratedRGB"/>
                                 </state>
-                            </button>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="UAZ-Z3-83y">
-                                <rect key="frame" x="312" y="686" width="82" height="30"/>
-                                <state key="normal" title="Cancel">
-                                    <color key="titleColor" red="0.78375552400000004" green="0.05504809494" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
-                                </state>
+                                <connections>
+                                    <action selector="saveUserRegistrationFormData:" destination="CKD-zU-5oj" eventType="touchUpInside" id="zqW-Ma-5In"/>
+                                </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="OyU-Cm-dsf">
-                                <rect key="frame" x="172" y="686" width="82" height="30"/>
+                                <rect key="frame" x="167" y="601" width="82" height="33"/>
                                 <state key="normal" title="Clear Form"/>
+                                <connections>
+                                    <action selector="clearUserRegistrationFormData:" destination="CKD-zU-5oj" eventType="touchUpInside" id="B8x-7s-rcn"/>
+                                </connections>
                             </button>
                             <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="E-mail Address" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="3SR-HU-EdT">
                                 <rect key="frame" x="20" y="317" width="374" height="30"/>
@@ -461,14 +469,15 @@
                                     <outlet property="delegate" destination="CKD-zU-5oj" id="FX2-Y4-B24"/>
                                 </connections>
                             </textField>
-                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Last 4 Digits" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="OOE-Fw-atS">
-                                <rect key="frame" x="297" y="270" width="97" height="30"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                <textInputTraits key="textInputTraits"/>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="UAZ-Z3-83y">
+                                <rect key="frame" x="312" y="597" width="82" height="41"/>
+                                <state key="normal" title="Cancel">
+                                    <color key="titleColor" red="0.78375552400000004" green="0.05504809494" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                </state>
                                 <connections>
-                                    <outlet property="delegate" destination="CKD-zU-5oj" id="f2Z-Gd-IIJ"/>
+                                    <action selector="cancelUserRegistrationFormFill:" destination="CKD-zU-5oj" eventType="touchUpInside" id="tEb-oW-SAS"/>
                                 </connections>
-                            </textField>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
@@ -584,7 +593,7 @@
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="How did you hear about us?" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumFontSize="9" translatesAutoresizingMaskIntoConstraints="NO" id="wEs-6N-0Hn">
-                                <rect key="frame" x="101" y="543" width="213" height="21"/>
+                                <rect key="frame" x="102" y="511" width="213" height="21"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
@@ -596,10 +605,10 @@
                                 <nil key="highlightedColor"/>
                             </label>
                             <pickerView tag="1" contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="pNW-Ma-bBC">
-                                <rect key="frame" x="20" y="572" width="374" height="66"/>
+                                <rect key="frame" x="21" y="540" width="374" height="66"/>
                             </pickerView>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="qFw-sw-UWA">
-                                <rect key="frame" x="21" y="681" width="96" height="30"/>
+                                <rect key="frame" x="21" y="652" width="96" height="35"/>
                                 <state key="normal" title="Save Data">
                                     <color key="titleColor" red="0.0018469241289999999" green="0.70837279040000001" blue="0.17847839069999999" alpha="1" colorSpace="calibratedRGB"/>
                                 </state>
@@ -607,20 +616,20 @@
                                     <action selector="saveDataButtonPressed:" destination="bAD-Yr-tyw" eventType="touchUpInside" id="uNF-Kn-79K"/>
                                 </connections>
                             </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Cxw-Fo-F0I">
+                                <rect key="frame" x="176" y="655" width="82" height="30"/>
+                                <state key="normal" title="Clear Form"/>
+                                <connections>
+                                    <action selector="clearFormButtonPressed:" destination="bAD-Yr-tyw" eventType="touchUpInside" id="WTI-ak-U9s"/>
+                                </connections>
+                            </button>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Fef-ZT-7Cf">
-                                <rect key="frame" x="312" y="681" width="82" height="30"/>
+                                <rect key="frame" x="313" y="654" width="82" height="30"/>
                                 <state key="normal" title="Cancel">
                                     <color key="titleColor" red="0.78375552400000004" green="0.05504809494" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                 </state>
                                 <connections>
                                     <action selector="cancelFormButtonPressed:" destination="bAD-Yr-tyw" eventType="touchUpInside" id="5wO-Cj-Obu"/>
-                                </connections>
-                            </button>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Cxw-Fo-F0I">
-                                <rect key="frame" x="172" y="681" width="82" height="30"/>
-                                <state key="normal" title="Clear Form"/>
-                                <connections>
-                                    <action selector="clearFormButtonPressed:" destination="bAD-Yr-tyw" eventType="touchUpInside" id="WTI-ak-U9s"/>
                                 </connections>
                             </button>
                         </subviews>

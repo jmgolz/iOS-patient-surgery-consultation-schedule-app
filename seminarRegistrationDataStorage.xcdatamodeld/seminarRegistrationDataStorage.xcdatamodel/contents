@@ -2,7 +2,7 @@
 <model userDefinedModelVersionIdentifier="" type="com.apple.IDECoreDataModeler.DataModel" documentVersion="1.0" lastSavedToolsVersion="8195" systemVersion="14F27" minimumToolsVersion="Xcode 7.0">
     <entity name="MedicalFormData" syncable="YES"/>
     <entity name="SeminarRegisteredFor" syncable="YES"/>
-    <entity name="UserFormData" syncable="YES">
+    <entity name="UserFormData" representedClassName="UserFormDataStorageObject" syncable="YES">
         <attribute name="address1" optional="YES" attributeType="String" syncable="YES"/>
         <attribute name="address2" optional="YES" attributeType="String" syncable="YES"/>
         <attribute name="areaCode" optional="YES" attributeType="String" syncable="YES"/>
