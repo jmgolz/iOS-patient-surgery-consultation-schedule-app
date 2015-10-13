@@ -27,4 +27,5 @@
 @dynamic  phoneFirstThree;
 @dynamic  phoneLastFour;
 
+@dynamic seminarID;
 @end

@@ -43,6 +43,11 @@
         TableResultsView *instanceDestinationViewController = [segue destinationViewController];
         instanceDestinationViewController.jsonResults = self.allSeminars;        
     }
+    
+    if ([[segue identifier] isEqualToString:@"moveToRegistrationForms"]) {
+        RegistrationFormNavigationController *seminarRegistrations = [segue destinationViewController];
+        seminarRegistrations.selectedSeminar = self.selectedSeminar;
+    }
 //        TableResultsView *instanceDestinationViewController = [segue destinationViewController];
 //        instanceDestinationViewController.jsonResults = self.allSeminars;
 }

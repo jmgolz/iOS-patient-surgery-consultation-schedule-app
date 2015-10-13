@@ -49,12 +49,21 @@
 @property NSArray *bestTimeToCallDataSource;
 @property NSFetchedResultsController *fetchedResultsController;
 @property RegistrationFormDataController *dataController;
+@property NSDictionary *selectedSeminar;
+
+//Temporary storage for picker views
+@property NSString *timeZoneSelected;
+@property NSString *bestTimeToCallSelected;
+@property NSString *stateSelected;
 
 //Form interaction methods
 - (IBAction)saveUserRegistrationFormData:(id)sender;
 - (IBAction)clearUserRegistrationFormData:(id)sender;
 - (IBAction)cancelUserRegistrationFormFill:(id)sender;
 - (void)instantiateCoreDataStorageObject;
+
+//Delegate (protocol) method implementations
+-(void)pickerView:(UIPickerView *)pickerView didSelectRow:(NSInteger)row inComponent:(NSInteger)component;
 
 
 @end

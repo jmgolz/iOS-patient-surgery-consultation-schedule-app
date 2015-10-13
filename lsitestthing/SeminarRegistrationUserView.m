@@ -18,6 +18,10 @@
     return self;
 }
 
+-(void)viewDidAppear:(BOOL)animated{
+    //NSLog(@"seminar id? after reappar %@", self.selectedSeminar.debugDescription);
+}
+
 - (void)viewDidLoad {
     [super viewDidLoad];
     // Do any additional setup after loading the view.
@@ -37,6 +41,9 @@
     self.timeZoneDataSource = [[NSArray arrayWithContentsOfFile:[[NSBundle mainBundle] pathForResource:@"applicationReusableData" ofType:@"plist"]] objectAtIndex:1];
     
     self.bestTimeToCallDataSource = [[NSArray arrayWithContentsOfFile:[[NSBundle mainBundle] pathForResource:@"applicationReusableData" ofType:@"plist"]] objectAtIndex:2];
+    
+    NSLog(@"seminar id? %@", self.selectedSeminar.debugDescription);
+    
     //NSLog(@"data storage: %@", self.dataController.debugDescription);
     
     
@@ -51,7 +58,7 @@
     
     UserFormDataStorageObject *resultsFromArray = [results objectAtIndex:0];
 
-    NSLog(@"Data? %@", [resultsFromArray phoneFirstThree]);
+    NSLog(@"Data? %@", [resultsFromArray address1]);
     
     //end test
     
@@ -105,22 +112,20 @@
 - (IBAction)saveUserRegistrationFormData:(id)sender {
     UserFormDataStorageObject *makeSaveDataObject = [NSEntityDescription insertNewObjectForEntityForName:@"UserFormData" inManagedObjectContext:[self.dataController managedObjectContext]];
     
-    makeSaveDataObject.streetAddress = @"test streetAddress";
-    makeSaveDataObject.address1 = @"test address1";
-    makeSaveDataObject.address2 = @"test address2";
-    makeSaveDataObject.city = @"test city";
-    makeSaveDataObject.state = @"test state";
-    makeSaveDataObject.zipCode = @"test zipCode";
+    makeSaveDataObject.firstName = self.firstNameField.text;
+    makeSaveDataObject.lastName = self.lastNameField.text;
+    makeSaveDataObject.address1 = self.streetAddressField.text;
+    makeSaveDataObject.address2 = self.secondAddressField.text;
+    makeSaveDataObject.city = self.cityField.text;
+    makeSaveDataObject.zipCode = self.zipcodeField.text;
+    makeSaveDataObject.areaCode = self.areaCodeField.text;
+    makeSaveDataObject.phoneFirstThree = self.phoneNumberFirstThreeDigitsField.text;
+    makeSaveDataObject.phoneLastFour = self.phoneNumberLastFourDigitsField.text;
+    makeSaveDataObject.emailAddress = self.emailAddressField.text;
     
-    makeSaveDataObject.firstName = @"test firstName";
-    makeSaveDataObject.lastName = @"test lastName";
-    makeSaveDataObject.emailAddress = @"test emailAddress";
-    makeSaveDataObject.timeZone = @"test timeZone";
-    
-    makeSaveDataObject.bestTimeToCall = @"test bestTimeToCall";
-    makeSaveDataObject.areaCode = @"test areaCode";
-    makeSaveDataObject.phoneFirstThree = @"test phoneFirstThree";
-    makeSaveDataObject.phoneLastFour = @"test phoneLastFour";
+    makeSaveDataObject.timeZone = self.timeZoneSelected;
+    makeSaveDataObject.bestTimeToCall = self.bestTimeToCallSelected;
+    makeSaveDataObject.state = self.stateSelected;
     
     NSError *saveError = nil;
     [[self.dataController managedObjectContext] insertObject:makeSaveDataObject];
@@ -148,6 +153,22 @@
 }
 
 - (IBAction)clearUserRegistrationFormData:(id)sender {
+//    NSError *dataRequestError = nil;
+//    NSFetchRequest *dataStorageFetchRequest = [NSFetchRequest fetchRequestWithEntityName:@"UserFormData"];
+//    NSSortDescriptor *sortByLastName = [NSSortDescriptor sortDescriptorWithKey:@"lastName" ascending:YES];
+//    [dataStorageFetchRequest setSortDescriptors:@[sortByLastName]];
+//    
+//    NSArray *results = [[self.dataController managedObjectContext] executeFetchRequest:dataStorageFetchRequest error:&dataRequestError];
+//    NSLog(@"Errors: %@\n%@", [dataRequestError localizedDescription], [dataRequestError userInfo]);
+//    
+//    UserFormDataStorageObject *resultsFromArray = [results objectAtIndex:0];
+//    
+//    NSLog(@"Data? %@", [resultsFromArray phoneFirstThree]);
+//    
+//    //DELETE!
+//    [[self.dataController managedObjectContext] deleteObject:resultsFromArray];
+    
+    //end test
 }
 
 - (IBAction)cancelUserRegistrationFormFill:(id)sender {
@@ -157,33 +178,21 @@
     self.dataController = [[RegistrationFormDataController alloc] init];
     [self setDataController:self.dataController];
     [[self fetchedResultsController] setDelegate:self];
+}
+
+-(void)pickerView:(UIPickerView *)pickerView didSelectRow:(NSInteger)row inComponent:(NSInteger)component{
+    if (pickerView.tag == 0){
+        self.stateSelected = [[self.statesAbbrevAndFullNamesDataSource objectAtIndex:row] objectForKey:@"stateFullName"];
+        NSLog(@"selected picker view value: %@", self.stateSelected);
+    } else if (pickerView.tag == 1) {
+        self.timeZoneSelected = [self.timeZoneDataSource objectAtIndex:row];
+        NSLog(@"selected picker view value: %@", self.timeZoneSelected);
+    } else if (pickerView.tag == 2) {
+        self.bestTimeToCallSelected = [self.bestTimeToCallDataSource objectAtIndex:row];
+        NSLog(@"selected picker view value: %@", self.bestTimeToCallSelected);
+    }
     
-    //NSFetchRequest *dataStorageFetchRequest = [NSFetchRequest fetchRequestWithEntityName:@"UserFormData"];
     
-//        NSSortDescriptor *sortByLastName = [NSSortDescriptor sortDescriptorWithKey:@"lastName" ascending:YES];
-//        [dataStorageFetchRequest setSortDescriptors:@[sortByLastName]];
-    
-    
-    
-    
-    //    [self setFetchedResultsController:[[NSFetchedResultsController alloc] initWithFetchRequest:dataStorageFetchRequest managedObjectContext:[self.dataController managedObjectContext] sectionNameKeyPath:nil cacheName:nil]];
-    //
-    
-    //
-    
-    //NSError *error = nil;
-    //NSArray *results = [[self.dataController managedObjectContext] executeFetchRequest:dataStorageFetchRequest error:&error];
-    
-//    if (!results) {
-//        NSLog(@"Error fetching Employee objects: %@\n%@", [error localizedDescription], [error userInfo]);
-//        abort();
-//    } else {
-//        NSLog(@"got data! %@", results.debugDescription);
-//    }
-    //    if (![[self fetchedResultsController] performFetch:&error]) {
-    //        NSLog(@"Failed to initialize FetchedResultsController: %@\n%@", [error localizedDescription], [error userInfo]);
-    //        abort();
-    //    }
 }
 
 @end

@@ -19,6 +19,10 @@
     self.insuranceCompanyDataSource = [[NSArray arrayWithContentsOfFile:[[NSBundle mainBundle] pathForResource:@"applicationReusableData" ofType:@"plist"]] objectAtIndex:3];
 }
 
+-(void)viewDidAppear:(BOOL)animated{
+    //NSLog(@"seminar id? after reappar %@", self.selectedSeminar.debugDescription);
+}
+
 - (void)viewDidLoad {
     [super viewDidLoad];
     // Do any additional setup after loading the view.
@@ -27,6 +31,7 @@
     
     self.howDidYouHearAboutUsPicker.delegate = self;
     self.howDidYouHearAboutUsPicker.dataSource = self;
+    NSLog(@"seminar id? %@", self.selectedSeminar.debugDescription);
 }
 
 - (void)didReceiveMemoryWarning {

@@ -27,4 +27,6 @@
 @property NSString *phoneFirstThree;
 @property NSString *phoneLastFour;
 
+@property NSString *seminarID;
+
 @end

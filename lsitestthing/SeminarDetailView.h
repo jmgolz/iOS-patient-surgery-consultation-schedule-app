@@ -9,6 +9,7 @@
 #import <UIKit/UIKit.h>
 #import <MapKit/MapKit.h>
 #import "TableResultsView.h"
+#import "RegistrationFormNavigationController.h"
 
 @interface SeminarDetailView : UIViewController
 @property (weak, nonatomic) IBOutlet MKMapView *seminarMapDisplay;

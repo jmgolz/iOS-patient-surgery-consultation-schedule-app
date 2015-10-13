@@ -272,7 +272,7 @@
                                 <rect key="frame" x="20" y="618" width="128" height="30"/>
                                 <state key="normal" title="Fill out registration"/>
                                 <connections>
-                                    <segue destination="qya-0q-xd3" kind="show" id="W3i-IP-VUW"/>
+                                    <segue destination="qya-0q-xd3" kind="show" identifier="moveToRegistrationForms" id="W3i-IP-VUW"/>
                                 </connections>
                             </button>
                         </subviews>

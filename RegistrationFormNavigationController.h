@@ -7,9 +7,12 @@
 //
 
 #import <UIKit/UIKit.h>
+#import "SeminarRegistrationMedicalView.h"
+#import "SeminarRegistrationUserView.h"
 
-@interface RegistrationFormNavigationController : UITabBarController
+@interface RegistrationFormNavigationController : UITabBarController<UITabBarControllerDelegate>
 @property (weak, nonatomic) IBOutlet UITabBar *registrationFormControllerTabBar;
+@property NSDictionary *selectedSeminar;
 
 
 

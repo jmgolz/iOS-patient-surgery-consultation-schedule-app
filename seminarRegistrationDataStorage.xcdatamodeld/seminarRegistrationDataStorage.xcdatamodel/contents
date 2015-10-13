@@ -13,13 +13,14 @@
         <attribute name="lastName" optional="YES" attributeType="String" syncable="YES"/>
         <attribute name="phoneFirstThree" optional="YES" attributeType="String" syncable="YES"/>
         <attribute name="phoneLastFour" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="seminarID" optional="YES" attributeType="String" syncable="YES"/>
         <attribute name="state" optional="YES" attributeType="String" syncable="YES"/>
         <attribute name="streetAddress" optional="YES" attributeType="String" syncable="YES"/>
         <attribute name="timeZone" optional="YES" attributeType="String" syncable="YES"/>
         <attribute name="zipCode" optional="YES" attributeType="String" syncable="YES"/>
     </entity>
     <elements>
-        <element name="UserFormData" positionX="-45" positionY="0" width="128" height="255"/>
+        <element name="UserFormData" positionX="-45" positionY="0" width="128" height="270"/>
         <element name="SeminarRegisteredFor" positionX="-27" positionY="18" width="128" height="45"/>
         <element name="MedicalFormData" positionX="0" positionY="144" width="128" height="45"/>
     </elements>

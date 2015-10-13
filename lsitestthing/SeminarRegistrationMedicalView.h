@@ -39,5 +39,6 @@
 //Data sources
 @property NSArray *insuranceCompanyDataSource;
 @property NSArray *howDidYouHearAboutUsDataSource;
+@property NSDictionary *selectedSeminar;
 
 @end
