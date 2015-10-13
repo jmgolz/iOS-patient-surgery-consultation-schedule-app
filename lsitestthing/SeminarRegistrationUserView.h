@@ -66,4 +66,6 @@
 -(void)pickerView:(UIPickerView *)pickerView didSelectRow:(NSInteger)row inComponent:(NSInteger)component;
 
 
+//Instantiate/setup methods
+-(void)populateUserRegistrationFieldsIfUserSavedData:(UserFormDataStorageObject *)savedDataObject;
 @end

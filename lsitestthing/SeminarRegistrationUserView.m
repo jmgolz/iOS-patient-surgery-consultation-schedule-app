@@ -56,9 +56,11 @@
     NSArray *results = [[self.dataController managedObjectContext] executeFetchRequest:dataStorageFetchRequest error:&dataRequestError];
     NSLog(@"Errors: %@\n%@", [dataRequestError localizedDescription], [dataRequestError userInfo]);
     
-    UserFormDataStorageObject *resultsFromArray = [results objectAtIndex:0];
+    UserFormDataStorageObject *resultsFromArray = results.firstObject;
 
-    NSLog(@"Data? %@", [resultsFromArray address1]);
+    NSLog(@"Data? %@", [resultsFromArray state]);
+    
+    [self populateUserRegistrationFieldsIfUserSavedData:resultsFromArray];
     
     //end test
     
@@ -191,8 +193,41 @@
         self.bestTimeToCallSelected = [self.bestTimeToCallDataSource objectAtIndex:row];
         NSLog(@"selected picker view value: %@", self.bestTimeToCallSelected);
     }
-    
-    
 }
 
+
+
+-(void)populateUserRegistrationFieldsIfUserSavedData:(UserFormDataStorageObject *)savedDataObject{
+    NSArray *getAllViews = [[self view] subviews];
+    //NSLog(@"GET ALL VIEWS ON? %@", [[self view] subviews]);
+    for (UIView *viewController in getAllViews) {
+        NSString *controllerType = NSStringFromClass([viewController class]);
+        
+        if ([controllerType isEqualToString:@"UITextField"]) {
+            [viewController setValue:[savedDataObject valueForKey:[viewController accessibilityIdentifier]] forKey:@"text"];
+        }
+        
+        if ([controllerType isEqualToString:@"UIPickerView"]) {
+            NSUInteger indexOfItemSelectedByUser = -1;
+            if(viewController.tag == 0){
+//                NSArray *findState = [self.statesAbbrevAndFullNamesDataSource objectAtIndex:0];
+//                for (NSDictionary *stateData in findState) {
+//                    if ([[stateData valueForKey:@"stateFullName"] isEqualToString:savedDataObject.state]) {
+//                        indexOfItemSelectedByUser = [self.statesAbbrevAndFullNamesDataSource indexOfObject:stateData];
+//                    }
+//                }
+            }
+            if(viewController.tag == 1){
+                 indexOfItemSelectedByUser = [self.timeZoneDataSource indexOfObject:savedDataObject.timeZone];
+            } else {
+                indexOfItemSelectedByUser = [self.bestTimeToCallDataSource indexOfObject:savedDataObject.bestTimeToCall];
+            }
+            //[viewController selectRow:indexOfItemSelectedByUser inComponent:0 animated:NO];
+            [(UIPickerView *)viewController selectRow:indexOfItemSelectedByUser inComponent:0 animated:NO];
+        }
+        
+        
+        NSLog(@"THIS ON? %@", [viewController debugDescription]);
+    }
+}
 @end

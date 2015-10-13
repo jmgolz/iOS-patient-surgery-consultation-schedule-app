@@ -26,6 +26,7 @@ static const BOOL APP_DEBUG = NO;
 
 @property NSString *zipCode;
 @property (strong, nonatomic) NSMutableArray *zipCodeResults;
+@property (weak, nonatomic) IBOutlet UIButton *searchCareCenterButton;
 
 - (IBAction)getApiData:(id)sender;
 -(void)apiInteractionComplete:(NSMutableArray*)returnedData error:(NSError*)error apiEndpointUsed:(NSString*)apiEndpoint;
