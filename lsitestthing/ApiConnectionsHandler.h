@@ -7,9 +7,9 @@
 //
 
 #import <Foundation/Foundation.h>
-static const NSString *apiUrlBase = @"http://api.laserspineinstitute.com/";
-static const NSString *seminarsEndpointURLFragment = @"seminars.json";
-static const NSString *zipcodeEndpointURLFragment = @"zip/radius.json?";
+static const NSString *apiUrlBase = @"http://redacted because work privacy and stuff/";
+static const NSString *seminarsEndpointURLFragment = @"SAME";
+static const NSString *zipcodeEndpointURLFragment = @"SAME!";
 
 @protocol ApiConnectionsHandlerDelegate;
 
