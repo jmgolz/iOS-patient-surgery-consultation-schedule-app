@@ -11,7 +11,7 @@
 @implementation ApiConnectionsHandler
 
 - (void)getApiSeminarData:(NSURLSession*)connectionHandler{
-    NSMutableString *apiUrlEndpoint = [NSMutableString stringWithFormat:@"%@seminars.json?", apiUrlBase];
+    NSMutableString *apiUrlEndpoint = [NSMutableString stringWithFormat:@"%@redacted because NDAs", apiUrlBase];
     NSURLRequest *apiConnectionRequest = [[NSURLRequest alloc] initWithURL:[NSURL URLWithString:apiUrlEndpoint] cachePolicy:NSURLRequestUseProtocolCachePolicy timeoutInterval:5.0];
     
     
@@ -27,9 +27,9 @@
 }
 
 - (void)getApiZipCodeData:(NSURLSession*)connectionHandler zipCode:(NSString*)zipCode{
-    NSMutableString *apiUrlEndpoint = [NSMutableString stringWithFormat:@"%@zip/radius.json?", apiUrlBase];
-    [apiUrlEndpoint appendString:[NSString stringWithFormat:@"zip=%@", zipCode]];
-    [apiUrlEndpoint appendString:@"&radius=100&fields=ZipCode"];
+    NSMutableString *apiUrlEndpoint = [NSMutableString stringWithFormat:@"%@redacted because NDAs?", apiUrlBase];
+    [apiUrlEndpoint appendString:[NSString stringWithFormat:@"redacted because NDAs%@", zipCode]];
+    [apiUrlEndpoint appendString:@"redacted because NDAs"];
     
     
     NSURLRequest *apiConnectionRequest = [[NSURLRequest alloc] initWithURL:[NSURL URLWithString:apiUrlEndpoint] cachePolicy:NSURLRequestUseProtocolCachePolicy timeoutInterval:5.0];
